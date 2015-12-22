@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Tools for Analytics Lab - R-track</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Tools for Analytics Lab - R-track</h1>
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Name</strong></td>
+<td align="left">Gergely Daroczi</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Department</strong></td>
+<td align="left">Department of Economics, CEU Business School</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Semester</strong></td>
+<td align="left">Winter, 2015</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Course level</strong></td>
+<td align="left">MA</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Credits</strong></td>
+<td align="left">2 credits</td>
+</tr>
+</tbody>
+</table>
+<h2 id="course-description">Course Description</h2>
+<p>This is an introductory course on how to use the R programming language and software environment for data manipulations, exploratory data analysis, statistical modeling, machine learning, data visualizations, automated reporting and self-service dashboards.</p>
+<h2 id="course-requirements">Course Requirements</h2>
+<p>Assessment is through in-class exam (50%) and take-home assignments (50%).</p>
+<h2 id="outline">Outline</h2>
+<h3 id="jan-25-90-min-introduction-to-r-and-general-programming">Jan 25 (90 min): Introduction to R and General Programming</h3>
+<ul>
+<li>Downloading and installing R</li>
+<li>History of R, general ecosystem, R packages, CRAN</li>
+<li>R community, R-bloggers, StackOverflow, Coursera, DataCamp</li>
+<li>R User Groups &amp; meetups</li>
+</ul>
+<!-- end of list -->
+<ul>
+<li>RStudio</li>
+<li>git, GitHub</li>
+</ul>
+<!-- end of list -->
+<ul>
+<li>R Syntax: Variables, functions, descriptive statistics</li>
+<li>Loading data from text files</li>
+</ul>
+<!-- end of list -->
+<ul>
+<li>Univariate statistics</li>
+<li>Statistics with two variables: cross-tables, correlation, ANOVA</li>
+<li>Simpson's paradox</li>
+</ul>
+<h3 id="jan-26-90-min-first-steps-with-data-visualization">Jan 26 (90 min): First Steps with Data Visualization</h3>
+<ul>
+<li>Plots outside of Excel: <code>dotchart</code> and <code>violinplot</code> examples</li>
+<li>The Grammar of Graphics in R with <code>ggplot2</code></li>
+<li>Using interactive JavaScript libraries with <code>htmlwidgets</code></li>
+</ul>
+<h3 id="jan-27-140-min-data-preparation">Jan 27 (140 min): Data Preparation</h3>
+<ul>
+<li>Loading data from relational databases -- using <code>sqlite</code></li>
+<li>Filtering and summarizing data with <code>plyr</code>, <code>dplyr</code> and <code>data.table</code></li>
+<li>Merging and left/right/inner/outer/anti-joining data</li>
+<li>Wide and long tables with <code>reshape2</code> and <code>tidyr</code></li>
+<li>Regular expressions</li>
+<li>Dealing with date and time</li>
+<li>Other dirty data problems (missing values, data imputation, outliers)</li>
+</ul>
+<h3 id="jan-28-140-min-an-r-introduction-to-modeling">Jan 28 (140 min): An R Introduction to Modeling</h3>
+<ul>
+<li>Correlation, causality</li>
+<li>Linear regression</li>
+<li>Goodness of fit</li>
+<li>Polynomial regression</li>
+<li>Overfitting</li>
+<li>Confounders</li>
+<li>Poisson/negative binomial regression</li>
+</ul>
+<h3 id="jan-30-180-min-supervised-and-unsupervised-ml-methods-for-qualitative-data">Jan 30 (180 min): Supervised and Unsupervised ML Methods for Qualitative Data</h3>
+<ul>
+<li>Hierarchical and k-means clustering</li>
+<li>Training and test dataset, cross validation, confusion matrix, accuracy, ROC curve</li>
+<li>Logistic regression</li>
+<li>k-Nearest Neighbors algorithm</li>
+<li>Decision trees with <code>rpart</code>, <code>caret</code> and <code>C50</code></li>
+</ul>
+<h3 id="jan-30-100-min-dimension-reduction">Jan 30 (100 min): Dimension Reduction</h3>
+<ul>
+<li>Principal Component Analysis</li>
+<li>Discriminant Analysis</li>
+<li>Multidimensional Scaling</li>
+<li>Handling geospatial data in R</li>
+</ul>
+<h3 id="febr-1-90-min-supervised-ml-methods-for-quantitative-data">Febr 1 (90 min): Supervised ML Methods for Quantitative Data</h3>
+<ul>
+<li>Decision trees</li>
+<li>Random forest with <code>randomForest</code> and <code>H2O</code></li>
+<li>Gradient boosting</li>
+</ul>
+<!-- end of list -->
+<ul>
+<li>Consulting on exam exercises</li>
+</ul>
+<h3 id="febr-2-90-min-exam">Febr 2 (90 min): Exam</h3>
+<p>Develop R code to load, analyze, model and visualize data.</p>
+<h3 id="febr-3-140-min-dynamic-reports-and-reproducible-research">Febr 3 (140 min): Dynamic Reports and Reproducible Research</h3>
+<ul>
+<li>Introduction to markdown</li>
+<li>First steps with <code>knitr</code></li>
+<li>Markdown in R with <code>pander</code></li>
+<li>Chunk options and document formats in <code>rmarkdown</code> and <code>kintr</code></li>
+</ul>
+<h3 id="febr-4-140-min-interactive-data-analysis-and-dashboards">Febr 4 (140 min): Interactive Data Analysis and Dashboards</h3>
+<ul>
+<li>Introduction to <code>shiny</code> and <code>shinydashboard</code></li>
+<li><code>htmlwidgets</code> examples, including <code>networkd3d</code>, <code>leaflet</code>, <code>dygraphs</code>, <code>DT</code>, <code>treemap</code></li>
+</ul>
+<!-- end of list -->
+<ul>
+<li>Consulting on take-home assignments</li>
+</ul>
+</body>
+</html>
