@@ -160,6 +160,32 @@ p + theme_excel() + scale_colour_excel()
 p + theme_wsj() + scale_colour_wsj("colors6", "")
 p + theme_gdocs() + scale_colour_gdocs()
 
+## create a custom theme for future usage
+theme_custom <- function() {
+    theme(
+        axis.text = element_text(
+            family = 'Times New Roman',
+            color  = "orange",
+            size   = 12,
+            face   = "italic"),
+        axis.title = element_text(
+            family = 'Times New Roman',
+            color  = "orange",
+            size   = 16,
+            face   = "bold"),
+        axis.text.y = element_text(angle = 90, hjust = 0.5),
+        panel.background = element_rect(
+            fill = "orange",
+            color = "white",
+            size = 2)
+    )
+}
+p <- ggplot(diamonds, aes(x = carat, y = price, colour = cut)) + geom_point()
+p + theme_custom()
+## pick a color palette from http://colorbrewer2.org/
+p + theme_custom() + scale_color_brewer(palette = "Greens")
+## see more examples at http://docs.ggplot2.org/dev/vignettes/themes.html
+
 ## last
 library(GGally)
 ggpairs(diamonds)
