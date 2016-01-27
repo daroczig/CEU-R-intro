@@ -206,3 +206,5 @@ pairsD3(df)
 ##  * hp and wt by carb regression
 
 ## GH
+
+all.equal(mtcars["Toyota Corolla","carb"] / 10 + 0.05, 0.15)
