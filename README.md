@@ -13,3 +13,23 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 * Plots outside of Excel: `dotchart` and `vioplot` examples
 * The Grammar of Graphics in R with `ggplot2`
 * [GitHub registration](https://github.com/join)
+
+### Jan 27 (140 min): Data Preparation
+
+`ggplot2` exercises
+* number of carburetors
+* horsepower
+* barplot of number of carburetors per transmission
+* boxplot of horsepower by the number of carburetors
+* horsepower and weight by the number of carburetors
+* horsepower and weight by the number of carburetors with a trend line
+
+`data.table` exercises
+* the number of cancelled flights
+* the shortest flight on each weekday
+* the average delay to all destination
+* the average delay to all destination per destination
+* plot the departure and arrival delays
+* plot the average departure and arrival delays per destination
+* plot the average departure and arrival delays per flight + size
+* estimate the delay to Budapest
