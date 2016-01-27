@@ -12,9 +12,10 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 * Exploratory data analysis with the most often used plots
 * Plots outside of Excel: `dotchart` and `vioplot` examples
 * The Grammar of Graphics in R with `ggplot2`
-* [GitHub registration](https://github.com/join)
 
 ### Jan 27 (140 min): Data Preparation
+
+* [GitHub registration](https://github.com/join)
 
 `ggplot2` exercises
 * number of carburetors
