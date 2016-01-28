@@ -15,20 +15,22 @@ letters[c(1, 3)]
 h <- c(174, 170, 160)
 w <- c(90, 80, 70)
 
+## render a scatterplot
 plot(h, w, main = "Demo", xlab = 'Height', ylab = 'Weight')
 
+## compute the correlation coefficient
 cor(w, h)
 
+## build a basic linear model
 lm(w ~ h)
 fit <- lm(w ~ h)
 summary(fit)
 
+## plot this model
 plot(h, w, main = "Demo", xlab = 'Height', ylab = 'Weight')
 abline(fit, col = 'red')
 
-## we will get back to this on Thursday on modeling
-
-## data.frame
+## intro to data.frame object type
 df <- data.frame(weight = w, height = h)
 df
 str(df)
@@ -38,11 +40,11 @@ df[3, 2]
 df$weight
 df$weight[2]
 
-
 ## TODO how do you get 174 from the above matrix
 df[1, 2]
 
-## Body Mass Index (BMI) is a person's weight in kilograms divided by the square of height in meters.
+## compute Body Mass Index (BMI) by:
+## a person's weight in kilograms divided by the square of height in meters
 df$height <- df$height / 100
 df
 df$bmi <- df$weight / df$height^2
@@ -58,15 +60,21 @@ df$weight <- df$weightLb * 0.45
 df$bmi <- df$weight / (df$height/100)^2
 str(df)
 
+## #############################################################################
 ## basic plots
+## #############################################################################
+
+## draw a histogram
 hist(df$bmi)
+## add two vertical lines with the limits of normal BMI
 abline(v = c(18.5, 25), col = 'red')
 
-## you will have a data viz course for the more details
-
+## density plot on the same variable
 plot(density(df$bmi))
 
+## boxplot on the same variable
 boxplot(df$bmi)
+## with a split by gender
 boxplot(bmi ~ sex, df)
 
 ## boxplot alternatives
@@ -74,6 +82,7 @@ install.packages('vioplot')
 library(vioplot)
 par(mfrow=c(1,2))
 boxplot(df$bmi)
+## the violin plot includes the above boxplot + the kernel density plots
 vioplot(df$bmi)
 
 library(beanplot)
@@ -81,8 +90,10 @@ par(mfrow=c(1,2))
 boxplot(df$bmi)
 beanplot(df$bmi)
 
-## example on the advantages of vioplot over boxplot
+## revert the graphical device to include only one plot in the future
 par(mfrow=c(1,1))
+
+## example on the advantages of vioplot over boxplot
 boxplot(
   rbeta(1e3, 0.1, 0.1),
   runif(1e3)*2-0.5,
@@ -93,7 +104,7 @@ vioplot(
   runif(1e3)*2-0.5,
   rnorm(1e3, 0.5, 0.75))
 
-## pie chart alternatives
+## some pie chart alternatives
 pie(table(df$sex))
 barplot(table(df$sex))
 dotchart(table(df$sex))
@@ -103,19 +114,30 @@ dotchart(table(df$sex), xlim = c(0, 150))
 pairs(df)
 plot(df)
 
+## #############################################################################
 ## Wilkinson: The Grammar of Graphics
 ## R implementation by Hadley Wickham: ggplot2
+## #############################################################################
 
 library(ggplot2)
 ?diamonds
 
-## barplot
+## barplot with ggplot: you specify a dataset, then define an aesthetic and geom
 ggplot(diamonds, aes(x = cut)) + geom_bar()
+## and optionally some further layers (theme)
 ggplot(diamonds, aes(x = cut)) + geom_bar() + theme_bw()
 ggplot(diamonds, aes(x = cut)) + geom_bar(colour = "darkgreen", fill = "white") + theme_bw()
 
+## we can store the resulting plot as an R object for future reuse
 p <- ggplot(diamonds, aes(x = cut)) + geom_bar(colour = "darkgreen", fill = "white") + theme_bw()
 p
+
+## it's better to split long lines for easier reading
+p <- ggplot(diamonds, aes(x = cut)) +
+     geom_bar(colour = "darkgreen", fill = "white") +
+     theme_bw()
+p
+
 
 ## coord transformations
 library(scales)
@@ -124,7 +146,7 @@ p + scale_y_sqrt()
 p + scale_y_reverse()
 p + coord_flip()
 
-## facet
+## facet => create separate plots per group
 p + facet_wrap( ~ clarity)
 p + facet_grid(color ~ clarity)
 
@@ -139,12 +161,13 @@ ggplot(diamonds, aes(x = price)) + geom_bar(binwidth = 100)
 ggplot(diamonds, aes(x = price)) + geom_bar(binwidth = 1000)
 ggplot(diamonds, aes(x = price)) + geom_bar(binwidth = 10000)
 
+## density plot
 ggplot(diamonds, aes(price, fill = cut)) + geom_density(alpha = 0.2) + theme_bw()
 
 ## scatterplot
 p <- ggplot(diamonds, aes(x = carat, y = price)) + geom_point()
 
-## adding layers
+## stacking layers
 p
 p <- p + geom_smooth()
 p
@@ -186,7 +209,7 @@ p + theme_custom()
 p + theme_custom() + scale_color_brewer(palette = "Greens")
 ## see more examples at http://docs.ggplot2.org/dev/vignettes/themes.html
 
-## last
+## quick exploratory data analysis with ggplot (similar to the pairs command)
 library(GGally)
 ggpairs(diamonds)
 ggpairs(df)
@@ -204,5 +227,3 @@ pairsD3(df)
 ##  * boxplot of hp by carb
 ##  * hp and wt by carb
 ##  * hp and wt by carb regression
-
-## GH

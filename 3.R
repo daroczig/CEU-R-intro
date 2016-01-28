@@ -42,23 +42,29 @@ theme_custom <- function() {
             size = 2)
     )
 }
+## create and store a scatterplot
 p <- ggplot(mtcars, aes(x = hp, y = wt)) + geom_point(aes(color = factor(carb))) + geom_smooth()
+## apply our custom theme
 p + theme_custom()
-## pick a color palette from http://colorbrewer2.org/
+## you pick a color palette from http://colorbrewer2.org
 p + theme_custom() + scale_color_brewer(palette = "Greens")
-## custom color palette
+## or define custom color palette
 cols <- c('black', 'pink', 'yellow', 'orange', 'blue', '#18BA34', 'white')
 p + scale_color_manual(values = cols)
-## http://www.cookbook-r.com
+## find more ggplot2 details at http://www.cookbook-r.com
 
 ## quick example on fetching data from the Internet
 library(XML)
 df <- readHTMLTable(readLines('https://en.wikipedia.org/wiki/FTSE_100_Index'),
+                    ## we need the 2nd table from this page
+                    ## the table includes the column names
+                    ## and let's not transform strings (character vectors) to factor
                     which = 2, header = TRUE, stringsAsFactors = FALSE)
 str(df)
 
 ## quick fix some dirty data
 df$'Market cap (£bn)' <- as.numeric(df$'Market cap (£bn)')
+## we use "sub" to substitute a pattern  (",") with an empty string
 df$Employees <- as.numeric(sub(',', '', df$Employees))
 str(df)
 
@@ -76,10 +82,12 @@ summary(df)
 summary(df$Employees)
 fivenum(df$Employees)
 
-## first summaries
+## compute summaries
 table(df$Sector)
 hist(df$'Market cap (£bn)')
+## we compute the mean of Employees for each sector
 aggregate(Employees ~ Sector, FUN = mean, data = df)
+## and we can use other functions as well
 aggregate(Employees ~ Sector, FUN = min, data = df)
 aggregate(Employees ~ Sector, FUN = sd, data = df)
 aggregate(Employees ~ Sector, FUN = var, data = df)
@@ -112,7 +120,7 @@ subset(df, cap > 100 & Employees > 1e5)
 ggplot(subset(df, Sector == 'Banking'), aes(x = cap, y = Employees)) +
     geom_text(aes(label = Company))
 
-## avoid overlapping labels
+## avoid overlapping labels on the plot
 library(ggrepel)
 ggplot(subset(df, Sector == 'Banking'), aes(x = cap, y = Employees)) +
     geom_point() +
@@ -138,11 +146,15 @@ dt[Dest == 'LAX', .(DepTime, ArrTime)]
 ## summaries with data.table
 dt[, mean(Cancelled)]
 dt[, mean(Cancelled), by = DayOfWeek]
+
+## let's fix the column name in the resulting summary
 dta <- dt[, mean(Cancelled), by = DayOfWeek]
 setnames(dta, 'V1', 'Cancelled')
 dta
+## or in one step
 dt[, .(Cancelled = mean(Cancelled)), by = DayOfWeek]
 
+## we can filter and compute a summary in the same step
 dt[, .N, by = list(DayOfWeek)]
 dt[Dest == 'LAX', .N, by = list(DayOfWeek)]
 dt[Dest == 'LAX', .(P = .N / dt[, .N] * 100), by = list(DayOfWeek)]
@@ -201,7 +213,6 @@ ggplot(dt[Distance < 2000,
             .N),
           by = TailNum], aes(x = dist, y = delay, size = N)) + geom_point(alpha = .3)
 
-
 ## now let's do the same on the nycflights13::flights dataset
 library(nycflights13)
 flights <- data.table(flights)
@@ -226,13 +237,20 @@ str(airports)
 airports <- data.table(airports)
 airports[faa == 'LAX']
 
+## we merge the "airports" dataset to the "flights" based on the destination --
+## so we add new columns to the "flights" dataset from the "airports" dataset
+## by matching the "dest" column of "flights" with the "faa" column of "airports"
 merge(flights, airports, by.x = 'dest', by.y = 'faa')
+
+## we can merge to summary tables as well
 merge(flights[, .N, by = dest], airports, by.x = 'dest', by.y = 'faa')
+
+## inner VS left VS full join
 merge(flights[, .N, by = dest], airports, by.x = 'dest', by.y = 'faa', all.x = TRUE)
 merge(flights[, .N, by = dest], airports, by.x = 'dest', by.y = 'faa', all.x = TRUE)[is.na(name)]
 merge(flights[, .N, by = dest], airports, by.x = 'dest', by.y = 'faa', all.y = TRUE)
-## we could merge eg state data etc
 
+## merge plane data in a similar way
 str(planes)
 planes <- data.table(planes)
 dt <- merge(flights[, .(delay = mean(arr_delay, na.rm = TRUE)), by = tailnum], planes, by = 'tailnum')
