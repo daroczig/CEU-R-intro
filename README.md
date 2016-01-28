@@ -57,13 +57,45 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 		```
 		
 		Close this window, commit, push changes, all set.
-		
-* Correlation, causality
+
+* `data.table` exercises with the following dataset:
+
+	```r
+	set.seed(42)
+	tx <- data.table(
+        item   = sample(letters[1:3], 10, replace = TRUE),
+        time   = as.POSIXct(as.Date('2016-01-01')) - runif(10) * 36*60^2,
+        amount = rpois(10, 25))
+	prices <- data.table(
+        item  = letters[1:3],
+        date  = as.Date('2016-01-01') - 1:2,
+        price = as.vector(outer(c(100, 200, 300), c(1, 1.2))))
+	items <- data.table(
+        item   = letters[1:3],
+       color  = c('red', 'white', 'red'),
+      weight = c(2, 4, 2.5))
+	```
+    * filter for the transaction with "b" items
+	* filter for the transaction with less than 25 items
+	* filter for the transaction with less then 25 "b" items
+	* count the number of transactions for each items
+	* count the number of transactions for each day
+	* count the overall number of items sold on each day
+
+* Further `data.table` exercises:
+    * left joins
+    * transforming wide and long tables with `reshape2`
+	* rolling and overlap joins
+
+* ANOVA
+* Crosstable
 * Linear regression
-* Goodness of fit
+* Diagnose plots
+* Extrapolation
 * Polynomial regression
-* Overfitting
 * Confounders
+* Simpson's paradox
+* Correlation & causality
 
 Datasets and references for the model examples:
 * [height & weight dataset](http://bit.ly/BudapestBI-R-csv)
