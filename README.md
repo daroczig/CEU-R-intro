@@ -12,24 +12,46 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 * Exploratory data analysis with the most often used plots
 * Plots outside of Excel: `dotchart` and `vioplot` examples
 * The Grammar of Graphics in R with `ggplot2`
-* [GitHub registration](https://github.com/join)
 
 ### Jan 27 (140 min): Data Preparation
 
-`ggplot2` exercises
-* number of carburetors
-* horsepower
-* barplot of number of carburetors per transmission
-* boxplot of horsepower by the number of carburetors
-* horsepower and weight by the number of carburetors
-* horsepower and weight by the number of carburetors with a trend line
+* [GitHub registration](https://github.com/join)
 
-`data.table` exercises
-* the number of cancelled flights
-* the shortest flight on each weekday
-* the average delay to all destination
-* the average delay to all destination per destination
-* plot the departure and arrival delays
-* plot the average departure and arrival delays per destination
-* plot the average departure and arrival delays per flight + size
-* estimate the delay to Budapest
+* `ggplot2` exercises
+    * number of carburetors
+    * horsepower
+    * barplot of number of carburetors per transmission
+    * boxplot of horsepower by the number of carburetors
+    * horsepower and weight by the number of carburetors
+    * horsepower and weight by the number of carburetors with a trend line
+
+* Filtering and summarizing data with base `R`
+* Intro to `data.table`
+* `data.table` exercises with `hflights`
+    * the number of cancelled flights
+    * the shortest flight on each weekday
+    * the average delay to all destination
+    * the average delay to all destination per destination
+    * plot the departure and arrival delays
+    * plot the average departure and arrival delays per destination
+    * plot the average departure and arrival delays per flight + size
+    * estimate the delay to Budapest
+
+* Some quick examples on string and date manipulations
+* Left joins
+
+### Jan 28 (140 min): Models
+
+* GitHub integration in RStudio
+* Correlation, causality
+* Linear regression
+* Goodness of fit
+* Polynomial regression
+* Overfitting
+* Confounders
+
+Datasets and references for the model examples:
+* [height & weight dataset](http://bit.ly/BudapestBI-R-csv)
+* [OLS trend line distance from actual points](http://psycho.unideb.hu/statisztika/pages/interaktiv.html)
+* [Shoe size & math](http://psycho.unideb.hu/statisztika/pages/interaktiv.html)
+* [Bickel et al 1975](http://bit.ly/bickel-1975)
