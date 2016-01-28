@@ -75,14 +75,14 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
        color  = c('red', 'white', 'red'),
       weight = c(2, 4, 2.5))
 	```
-    * filter for the transaction with "b" items
-	* filter for the transaction with less than 25 items
-	* filter for the transaction with less then 25 "b" items
+    * filter for transactions with "b" items
+	* filter for transactions with less than 25 items
+	* filter for transactions with less then 25 "b" items
 	* count the number of transactions for each items
 	* count the number of transactions for each day
 	* count the overall number of items sold on each day
 
-* Further `data.table` exercises:
+* Further `data.table` examples on
     * left joins
     * transforming wide and long tables with `reshape2`
 	* rolling and overlap joins
