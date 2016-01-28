@@ -83,5 +83,8 @@ set.seed(42)
 plot(cumsum(round(runif(25))*2 - 1), type = 's')
 
 ## a much simpler solution for the above
-sample(c(-1, 1), 25, replace = TRUE)
 plot(cumsum(sample(c(-1, 1), 25, replace = TRUE)), type = 's')
+
+## solution for the homework from the presentation:
+## check if the 1/10th of the number of carburetors in a Toyota Corolla (in mtcars) plus 0.05 equals to 0.15
+all.equal(mtcars["Toyota Corolla","carb"] / 10 + 0.05, 0.15)
