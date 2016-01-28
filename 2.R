@@ -207,4 +207,3 @@ pairsD3(df)
 
 ## GH
 
-all.equal(mtcars["Toyota Corolla","carb"] / 10 + 0.05, 0.15)
