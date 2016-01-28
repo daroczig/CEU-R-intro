@@ -53,5 +53,5 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 Datasets and references for the model examples:
 * [height & weight dataset](http://bit.ly/BudapestBI-R-csv)
 * [OLS trend line distance from actual points](http://psycho.unideb.hu/statisztika/pages/interaktiv.html)
-* [Shoe size & math](http://psycho.unideb.hu/statisztika/pages/interaktiv.html)
+* [Shoe size & math](http://bit.ly/math_and_shoes)
 * [Bickel et al 1975](http://bit.ly/bickel-1975)
