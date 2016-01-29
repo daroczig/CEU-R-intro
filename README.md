@@ -136,6 +136,10 @@ Classification:
 * overfitting
 * other decision tree algorithms in R and the `caret` package
 
+Dimension reduction methods:
+* Principal Component Analysis
+* Multidimensional Scaling
+
 Datasets and references for the model examples:
 * [height & weight dataset](http://bit.ly/BudapestBI-R-csv)
 * [OLS trend line distance from actual points](http://psycho.unideb.hu/statisztika/pages/interaktiv.html)
