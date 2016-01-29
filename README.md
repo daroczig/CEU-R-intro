@@ -91,7 +91,7 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 * Crosstable
 * Simpson's paradox
 
-Datasets and references for the model examples:
+Datasets for the model examples:
 * [height & weight dataset](http://bit.ly/BudapestBI-R-csv)
 * [Bickel et al 1975](http://bit.ly/bickel-1975)
 
@@ -114,12 +114,27 @@ Further `data.table` exercises on the `nycflights13` dataset to practice for the
 
 ### Jan 28 (180 + 100 min): Modeling & intro to ML methods on qualitative data
 
+Basic models:
 * Linear regression
 * Diagnose plots
 * Extrapolation
 * Polynomial regression
 * Confounders
 * Correlation & causality
+* Importance of feature selection and engineering
+
+Clustering:
+* distance matrix
+* hierarchical clustering
+* identifying the optimal number of clusters
+* k-means clustering
+
+Classification:
+* confusion matrix
+* k-Nearest Neighbors algorithm
+* decision trees with `rpart`
+* overfitting
+* other decision tree algorithms in R and the `caret` package
 
 Datasets and references for the model examples:
 * [height & weight dataset](http://bit.ly/BudapestBI-R-csv)
