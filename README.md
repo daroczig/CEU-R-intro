@@ -89,16 +89,22 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 
 * ANOVA
 * Crosstable
+* Simpson's paradox
+
+Datasets and references for the model examples:
+* [height & weight dataset](http://bit.ly/BudapestBI-R-csv)
+* [Bickel et al 1975](http://bit.ly/bickel-1975)
+
+### Jan 28 (180 + 100 min): Modeling & intro to ML methods on qualitative data
+
 * Linear regression
 * Diagnose plots
 * Extrapolation
 * Polynomial regression
 * Confounders
-* Simpson's paradox
 * Correlation & causality
 
 Datasets and references for the model examples:
 * [height & weight dataset](http://bit.ly/BudapestBI-R-csv)
 * [OLS trend line distance from actual points](http://psycho.unideb.hu/statisztika/pages/interaktiv.html)
 * [Shoe size & math](http://bit.ly/math_and_shoes)
-* [Bickel et al 1975](http://bit.ly/bickel-1975)
