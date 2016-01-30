@@ -111,7 +111,7 @@ Further `data.table` exercises on the `nycflights13` dataset to practice for the
 * merge the `daily_temperatures` dataset to `flights` on the date
 * do the above two steps on daily + hourly temperature averages
 
-### Jan 28 (180 + 100 min): Modeling & intro to ML methods on qualitative data
+### Jan 28 (180 + 100 min): [Modeling & intro to ML methods on qualitative data](https://github.com/daroczig/CEU-R-lab/blob/master/4.5)
 
 Basic models:
 * Linear regression
