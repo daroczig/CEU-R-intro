@@ -1,4 +1,62 @@
 ## #############################################################################
+## `data.table` exercises on the `nycflights13` dataset
+## #############################################################################
+
+library(nycflights13)
+flights <- data.table(nycflights13::flights)
+
+##  count the number of flights to LAX
+flights[dest == 'LAX', .N]
+
+##  count the number of flights to LAX from JFK
+flights[dest == 'LAX' & origin == 'JFK', .N]
+
+##  compute the average delay (in minutes) for flights from JFK to LAX
+flights[dest == 'LAX' & origin == 'JFK', mean(arr_delay, na.rm = TRUE)]
+
+##  which destination has the lowest average delay from JFK?
+flights[origin == 'JFK', mean(arr_delay, na.rm = TRUE), by = dest][which.min(V1)]
+
+##  plot the average delay to all destinations from JFK
+ggplot(flights[origin == 'JFK', .(delay = mean(arr_delay, na.rm = TRUE)), by = dest],
+       aes(x = dest, delay)) + geom_bar(stat = 'identity')
+
+##  plot the distribution of all flight delays to all destinations from JFK
+ggplot(flights[origin == 'JFK'], aes(x = dest, arr_delay)) + geom_boxplot()
+
+##  compute a new variable in flights showing the week of day
+flights[, weekday := weekdays(as.Date(paste(year, month, day, sep = '-')))]
+
+##  plot the number of flights per weekday
+ggplot(flights, aes(weekday)) + geom_bar()
+
+##  create a heatmap on the number of flights per weekday and hour of the day (see `geom_tile`)
+ggplot(flights[, .N, by = .(weekday, hour)], aes(weekday, hour, fill = N)) + geom_tile()
+
+##  merge the `airports` dataset to `flights` on the FAA airport code
+merge(flights, airports, by.x = 'dest', by.y = 'faa', all.x = TRUE)
+
+setkey(flights, dest)
+setkey(airports, faa)
+airports[flights]
+
+##  order the `weather` dataset by `year`, `month`, `day` and `hour`
+weather <- data.table(nycflights13::weather)
+setorder(weather, year, month, day, hour)
+
+##  plot the average temperature at noon in `EWR` for each month based on the `weather` dataset
+ggplot(weather[origin == 'EWR' & hour == 12, mean(temp), by = month],
+       aes(factor(month), V1)) + geom_bar(stat = 'identity')
+
+##  aggregate the `weather` dataset and store as `daily_temperatures` to show the daily average temperatures based on the `EWR` records
+daily_temperatures <- weather[, .(avg_temp = mean(temp)), by = .(year, month, day)]
+
+##  merge the `daily_temperatures` dataset to `flights` on the date
+setkey(daily_temperatures, year, month, day)
+setkey(flights, year, month, day)
+daily_temperatures[flights]
+
+## #############################################################################
 ## linear models
 ## #############################################################################
 
