@@ -143,3 +143,35 @@ Datasets and references for the model examples:
 * [height & weight dataset](http://bit.ly/BudapestBI-R-csv)
 * [OLS trend line distance from actual points](http://psycho.unideb.hu/statisztika/pages/interaktiv.html)
 * [Shoe size & math](http://bit.ly/math_and_shoes)
+
+### Sample exam questions
+
+1. Load the content of the https://bit.ly/mtcars-csv CSV file and save as `df` (check the variable names in the manual of `mtcars`)
+2. Transform `df` to a `data.table` object
+3. Count the number of cars with `4` gears
+4. Count the number of cars with `4` gears and less than 100 horsepower
+5. What's the overall weight of cars with `4` cylinders?
+6. Which car is the heaviest?
+7. Plot the distribution of weights
+8. Plot the distribution of gears
+9. Plot the distribution of weights per gears
+10. Plot the average weight per gears
+11. Which car has the best fuel consumption?
+12. Plot the weight and horsepower of cars
+13. Add a linear trend line to the above plot
+14. Add a 3rd degree polynomial model to the above plot
+15. Fit a linear model on `hp` to predict weight
+16. Estimate the weight based on the above model for `Lotus Europa`
+17. Compute a new variable in the dataset for the ratio of `wt` and `hp`
+18. Plot the distribution of this new variable on a boxplot
+19. Create an aggregated dataset on `mtcars` including the average `hp` and `wt` based on the number of gears
+20. Merge the average `hp` and `wt` per gears from the above dataset to the original `df` object based on the number of gears
+21. Compute a new variable for fuel consumption using the "liters per 100 kilometers" unit based on `mpg`
+22. Which car has the best fuel consumption?
+23. Compute `wt2` to store the weight in kilograms based on `wt`
+24. Apply k-means clustering on the dataset to split the observations into 3 groups
+25. Perform hierarchical clustering on the dataset and plot the dendogram
+26. Build a decision tree to tell if a car has automatic or manual transmission
+27. Visualize the above decision tree
+28. Create a confusion matrix for the above model
+29. Use the k-NN algorithm to fit a similar model and decide on the best number of neighbors to use
