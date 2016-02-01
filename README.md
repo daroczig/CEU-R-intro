@@ -204,3 +204,20 @@ Datasets and references for the model examples:
 27. Visualize the above decision tree
 28. Create a confusion matrix for the above model
 29. Use the k-NN algorithm to fit a similar model and decide on the best number of neighbors to use
+
+### Feb 1 (90 min): Random forest and GBM with H2O
+
+Install the `h2o` package then start H2O in the R console:
+
+```r
+library(h2o)
+h2o.init()
+```
+
+If you get an error on the Blue Lab computers, then open a Windows Command Prompt in Start Menu/All Programs/Accessories and run the following command:
+
+```
+java -jar "c:\Program Files\R\R-3.2.3\library\h2o\java\h2o.jar"
+```
+
+And connect to H2O from R via rerunning the `h2o.init()` function from above.
