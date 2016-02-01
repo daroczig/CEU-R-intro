@@ -208,6 +208,10 @@ Datasets and references for the model examples:
 
 ### Feb 1 (90 min): Random forest and GBM with H2O
 
+Slides:
+* [PCA and `hclust` examples](http://bit.ly/CEU-R-PCA)
+* [General overview on bagging, random forest and boosting methods](http://bit.ly/CEU-R-boosting)
+
 Install the `h2o` package then start H2O in the R console:
 
 ```r
