@@ -12,6 +12,8 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 * [ggplot](#ggplot-ex1)
 * data.table: [1](#data-table-ex1), [2](#data-table-ex2), [3](#data-table-ex3)
 
+---
+
 ### Jan 25 (90 min): Introduction to R and General Programming
 
 * General overview of the R ecosystem: [slides](http://bit.ly/CEU-R-1)
