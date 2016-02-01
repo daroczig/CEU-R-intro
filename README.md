@@ -193,7 +193,7 @@ Datasets and references for the model examples:
 16. Estimate the weight based on the above model for `Lotus Europa`
 17. Compute a new variable in the dataset for the ratio of `wt` and `hp`
 18. Plot the distribution of this new variable on a boxplot
-19. Create an aggregated dataset on `mtcars` including the average `hp` and `wt` based on the number of gears
+19. Create an aggregated dataset on `mtcars` including the average `hp` and `wt` grouped by the number of gears
 20. Merge the average `hp` and `wt` per gears from the above dataset to the original `df` object based on the number of gears
 21. Compute a new variable for fuel consumption using the "liters per 100 kilometers" unit based on `mpg`
 22. Which car has the best fuel consumption?
