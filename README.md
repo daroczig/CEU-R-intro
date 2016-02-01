@@ -1,5 +1,13 @@
 This is the R script repository of the "[Tools for Analytics Lab - R-track](http://economics.ceu.edu/courses/1-tools-analytics-lab-r-track)" course, part of the [MSc in Business Analytics](http://business.ceu.edu/msc-in-business-analytics) at CEU.
 
+Table of Contents:
+* Jan 25: [Introduction to R and General Programming](#jan-25-90-min-introduction-to-r-and-general-programming)
+* Jan 26: [First Steps with Data Visualization](#jan-26-90-min-first-steps-with-data-visualization)
+* Jan 27: [Data Preparation](#jan-27-140-min-data-preparation)
+* Jan 28: [Introduction to modeling](#jan-28-140-min-models)
+* Jan 30: [Modeling & introduction to ML methods on qualitative data](#jan-28-180--100-min-modeling--intro-to-ml-methods-on-qualitative-data)
+* [Sample exam questions](#sample-exam-questions)
+
 ### Jan 25 (90 min): Introduction to R and General Programming
 
 * General overview of the R ecosystem: [slides](http://bit.ly/CEU-R-1)
