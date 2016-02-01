@@ -7,6 +7,7 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 * Jan 28: [Introduction to modeling](#jan-28-140-min-models)
 * Jan 30: [Modeling & introduction to ML methods on qualitative data](#jan-28-180--100-min-modeling--intro-to-ml-methods-on-qualitative-data)
 * [Sample exam questions](#sample-exam-questions)
+* Feb 01: [Random forest and GBM with H2O](#feb-1-90-min-random-forest-and-gbm-with-h2o)
 
 ### List of optional take-home exercises
 * [ggplot](#ggplot-ex1)
