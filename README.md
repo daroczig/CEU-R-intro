@@ -1,12 +1,16 @@
 This is the R script repository of the "[Tools for Analytics Lab - R-track](http://economics.ceu.edu/courses/1-tools-analytics-lab-r-track)" course, part of the [MSc in Business Analytics](http://business.ceu.edu/msc-in-business-analytics) at CEU.
 
-Table of Contents:
+## Table of Contents
 * Jan 25: [Introduction to R and General Programming](#jan-25-90-min-introduction-to-r-and-general-programming)
 * Jan 26: [First Steps with Data Visualization](#jan-26-90-min-first-steps-with-data-visualization)
 * Jan 27: [Data Preparation](#jan-27-140-min-data-preparation)
 * Jan 28: [Introduction to modeling](#jan-28-140-min-models)
 * Jan 30: [Modeling & introduction to ML methods on qualitative data](#jan-28-180--100-min-modeling--intro-to-ml-methods-on-qualitative-data)
 * [Sample exam questions](#sample-exam-questions)
+
+### List of optional take-home exercises
+* [ggplot](#ggplot-ex1)
+* data.table: [1](#data-table-ex1), [2](#data-table-ex2), [3](#data-table-ex3)
 
 ### Jan 25 (90 min): Introduction to R and General Programming
 
@@ -24,6 +28,8 @@ Table of Contents:
 
 * [Register a GitHub account](https://github.com/join)
 
+<a id="ggplot-ex1"></a>
+
 * `ggplot2` exercises
     * number of carburetors
     * horsepower
@@ -34,6 +40,9 @@ Table of Contents:
 
 * Filtering and summarizing data with base `R`
 * Intro to `data.table`
+
+<a id="data-table-ex1"></a>
+
 * `data.table` exercises with `hflights`
     * the number of cancelled flights
     * the shortest flight on each weekday
@@ -64,6 +73,8 @@ Table of Contents:
 		```
 		
 		Close this window, commit, push changes, all set.
+
+<a id="data-table-ex2"></a>
 
 * `data.table` exercises with the following dataset:
 
@@ -102,7 +113,10 @@ Datasets for the model examples:
 * [height & weight dataset](http://bit.ly/BudapestBI-R-csv)
 * [Bickel et al 1975](http://bit.ly/bickel-1975)
 
+<a id="data-table-ex3"></a>
+
 Further `data.table` exercises on the `nycflights13` dataset to practice for the exam:
+
 * count the number of flights to LAX
 * count the number of flights to LAX from JFK
 * compute the average delay (in minutes) for flights from JFK to LAX
@@ -122,6 +136,7 @@ Further `data.table` exercises on the `nycflights13` dataset to practice for the
 ### Jan 28 (180 + 100 min): [Modeling & intro to ML methods on qualitative data](https://github.com/daroczig/CEU-R-lab/blob/master/4.5)
 
 Basic models:
+
 * Linear regression
 * Diagnose plots
 * Extrapolation
@@ -131,12 +146,14 @@ Basic models:
 * Importance of feature selection and engineering
 
 Clustering:
+
 * distance matrix
 * hierarchical clustering
 * identifying the optimal number of clusters
 * k-means clustering
 
 Classification:
+
 * confusion matrix
 * k-Nearest Neighbors algorithm
 * decision trees with `rpart`
@@ -144,10 +161,12 @@ Classification:
 * other decision tree algorithms in R and the `caret` package
 
 Dimension reduction methods:
+
 * Principal Component Analysis
 * Multidimensional Scaling
 
 Datasets and references for the model examples:
+
 * [height & weight dataset](http://bit.ly/BudapestBI-R-csv)
 * [OLS trend line distance from actual points](http://psycho.unideb.hu/statisztika/pages/interaktiv.html)
 * [Shoe size & math](http://bit.ly/math_and_shoes)
