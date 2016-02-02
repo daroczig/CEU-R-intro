@@ -8,6 +8,7 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 * Jan 30: [Modeling & introduction to ML methods on qualitative data](#jan-28-180--100-min-modeling--intro-to-ml-methods-on-qualitative-data)
 * [Sample exam questions](#sample-exam-questions)
 * Feb 01: [Random forest and GBM with H2O](#feb-1-90-min-random-forest-and-gbm-with-h2o)
+* Feb 02: [Exam](#feb-2-90-min-exam)
 
 ### List of optional take-home exercises
 * [ggplot](#ggplot-ex1)
@@ -226,3 +227,24 @@ java -jar "c:\Program Files\R\R-3.2.3\library\h2o\java\h2o.jar"
 ```
 
 And connect to H2O from R via rerunning the `h2o.init()` function from above.
+
+### Feb 2 (90 min): Exam
+
+1. Transform the `mtcars` dataset to `data.table` and store as a new object
+2. Count the number of cars with less than `4` gears
+3. Count the number of cars with more than `4` gears and less than 100 horsepower
+4. What's the average weight of cars with `4` cylinders?
+5. Which car has the best fuel consumption?
+6. Plot the distribution of the number of carburetors 
+7. Plot the distribution of the number of carburetors grouped by gears
+8. Plot the average weight grouped by the number of carburetors
+9. Plot the weight and horsepower of cars
+10. Add a linear trend line to the above plot
+11. Add a 3rd degree polynomial model to the above plot
+12. Fit a linear model on the weight of cars to predict fuel consumption
+13. What's the estimated fuel consumption of a car with `wt = 5`?
+14. Install the `ISLR` package and use its `Auto` for the below exercises
+15. Build and visualize a decision tree to tell if a car was made in America, Europe or Japan
+16. Apply k-means or hierarchical clustering on the dataset to split the observations into 3 groups
+
+Bonus exercise: train a reasonable k-NN or other ML model classifying cars as American VS other origin (target for AUC > 0.95)
