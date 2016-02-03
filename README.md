@@ -177,7 +177,7 @@ Datasets and references for the model examples:
 
 ### Sample exam questions
 
-1. Load the content of the https://bit.ly/mtcars-csv CSV file and save as `df` (check the variable names in the manual of `mtcars`)
+1. Load the content of the https://bit.ly/mtcars-csvO CSV file and save as `df` (check the variable names in the manual of `mtcars`)
 2. Transform `df` to a `data.table` object
 3. Count the number of cars with `4` gears
 4. Count the number of cars with `4` gears and less than 100 horsepower
@@ -248,3 +248,7 @@ And connect to H2O from R via rerunning the `h2o.init()` function from above.
 16. Apply k-means or hierarchical clustering on the dataset to split the observations into 3 groups
 
 Bonus exercise: train a reasonable k-NN or other ML model classifying cars as American VS other origin (target for AUC > 0.95)
+
+### Feb 3 (140 min): Dynamic Reports and Reproducible Research
+
+For a formal introduction, see my [tutorial slides presented at useR! 2015](https://github.com/daroczig/user2015-markdown-tutorial) or for a quick intro: [7.Rmd](https://github.com/daroczig/CEU-R-lab/blob/master/7.Rmd)
