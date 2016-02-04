@@ -249,6 +249,14 @@ And connect to H2O from R via rerunning the `h2o.init()` function from above.
 
 Bonus exercise: train a reasonable k-NN or other ML model classifying cars as American VS other origin (target for AUC > 0.95)
 
+Results:
+
+```r
+grades <- c(61, 62, 65, 73, 76, 78, 89, 90, 91, 93, 94, 94, 95, 95, 96, 99, 100, 100, 100)
+library(ggplot2)
+ggplot() + geom_histogram(aes(grades), fill = 'orange', binwidth  = 5) + xlim(0, 100)
+```
+
 ### Feb 3 (140 min): Dynamic Reports and Reproducible Research
 
 For a formal introduction, see my [tutorial slides presented at useR! 2015](https://github.com/daroczig/user2015-markdown-tutorial) or for a quick intro: [7.Rmd](https://github.com/daroczig/CEU-R-lab/blob/master/7.Rmd)
