@@ -260,3 +260,13 @@ ggplot() + geom_histogram(aes(grades), fill = 'orange', binwidth  = 5) + xlim(0,
 ### Feb 3 (140 min): Dynamic Reports and Reproducible Research
 
 For a formal introduction, see my [tutorial slides presented at useR! 2015](https://github.com/daroczig/user2015-markdown-tutorial) or for a quick intro: [7.Rmd](https://github.com/daroczig/CEU-R-lab/blob/master/7.Rmd)
+
+### Feb 4 (140 min): Interactive Data Analysis and Dashboards
+
+Quick demo: [Network analysis of the Hungarian interbank lending market](https://daroczig.shinyapps.io/rinfinance_Berlinger-Daroczi-demo/)
+
+General Shiny [demos](http://shiny.rstudio.com/gallery) and [references](http://shiny.rstudio.com/reference/shiny/latest/)
+
+Example Shiny app we implemented in class: [8](https://github.com/daroczig/CEU-R-lab/tree/master/8)
+
+Home assignment and contact info: [slides](http://bit.ly/CEU-R-bye)
