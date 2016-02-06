@@ -9,6 +9,8 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 * [Sample exam questions](#sample-exam-questions)
 * Feb 01: [Random forest and GBM with H2O](#feb-1-90-min-random-forest-and-gbm-with-h2o)
 * Feb 02: [Exam](#feb-2-90-min-exam)
+* Feb 03: [Dynamic Reports and Reproducible Research](#feb-3-140-min-dynamic-reports-and-reproducible-research)
+* Feb 04: [Interactive Data Analysis and Dashboards](#feb-4-140-min-interactive-data-analysis-and-dashboards)
 
 ### List of optional take-home exercises
 * [ggplot](#ggplot-ex1)
