@@ -3,7 +3,7 @@
 ----------------------- ----------------------------------------------
 **Name**                Gergely Daroczi
 **Department**          Department of Economics, CEU Business School
-**Semester**            Winter, 2015
+**Semester**            Winter, 2016
 **Course level**        MA
 **Credits**             2 credits
 ----------------------- ----------------------------------------------
@@ -18,7 +18,7 @@ Assessment is through in-class exam (50%) and take-home assignments (50%).
 
 ## Outline
 
-### Jan 25 (90 min): Introduction to R and General Programming
+### Jan 28, 13:00-14:30 pm (60 min): Introduction to R and General Programming
 
 * Downloading and installing R
 * History of R, general ecosystem, R packages, CRAN
@@ -41,13 +41,13 @@ Assessment is through in-class exam (50%) and take-home assignments (50%).
 * Statistics with two variables: cross-tables, correlation, ANOVA
 * Simpson's paradox
 
-### Jan 26 (90 min): First Steps with Data Visualization
+### Jan 28, 15:00-16:00 pm (60 min): First Steps with Data Visualization
 
 * Plots outside of Excel: `dotchart` and `violinplot` examples
 * The Grammar of Graphics in R with `ggplot2`
 * Using interactive JavaScript libraries with `htmlwidgets`
 
-### Jan 27 (140 min): Data Preparation
+### Jan 29, 9:30-12:30 (150 min + 30 min break): Data Preparation
 
 * Loading data from relational databases -- using `sqlite`
 * Filtering and summarizing data with `plyr`, `dplyr` and `data.table`
@@ -57,7 +57,7 @@ Assessment is through in-class exam (50%) and take-home assignments (50%).
 * Dealing with date and time
 * Other dirty data problems (missing values, data imputation, outliers)
 
-### Jan 28 (140 min): An R Introduction to Modeling
+### Jan 29, 13:00-16:00 (150 min + 30 min break): An R Introduction to Modeling
 
 * Correlation, causality
 * Linear regression
@@ -67,7 +67,7 @@ Assessment is through in-class exam (50%) and take-home assignments (50%).
 * Confounders
 * Poisson/negative binomial regression
 
-### Jan 30 (180 min): Supervised and Unsupervised ML Methods for Qualitative Data
+### Feb 4, 9:30-11:00 (90 min): Supervised and Unsupervised ML Methods for Qualitative Data
 
 * Hierarchical and k-means clustering
 * Training and test dataset, cross validation, confusion matrix, accuracy, ROC curve
@@ -75,14 +75,14 @@ Assessment is through in-class exam (50%) and take-home assignments (50%).
 * k-Nearest Neighbors algorithm
 * Decision trees with `rpart`, `caret` and `C50`
 
-### Jan 30 (100 min): Dimension Reduction
+### Feb 4, 11:30-12:30 (60 min): Dimension Reduction
 
 * Principal Component Analysis
 * Discriminant Analysis
 * Multidimensional Scaling
 * Handling geospatial data in R
 
-### Febr 1 (90 min): Supervised ML Methods for Quantitative Data
+### Feb 4, 13:00-16:00 (150 min + 30 min break): Supervised ML Methods for Quantitative Data
 
 * Decision trees
 * Random forest with `randomForest` and `H2O`
@@ -92,18 +92,18 @@ Assessment is through in-class exam (50%) and take-home assignments (50%).
 
 * Consulting on exam exercises
 
-### Febr 2 (90 min): Exam
+### Feb 5, 9:30-11:00 (90 min): Exam
 
 Develop R code to load, analyze, model and visualize data.
 
-### Febr 3 (140 min): Dynamic Reports and Reproducible Research
+### Feb 5, 11:30-12:30 (60 min): Dynamic Reports and Reproducible Research
 
 * Introduction to markdown
 * First steps with `knitr`
 * Markdown in R with `pander`
 * Chunk options and document formats in `rmarkdown` and `kintr`
 
-### Febr 4 (140 min): Interactive Data Analysis and Dashboards
+### Feb 5, 13:00-16:00 (150 min + 30 min break): Interactive Data Analysis and Dashboards
 
 * Introduction to `shiny` and `shinydashboard`
 * `htmlwidgets` examples, including `networkd3d`, `leaflet`, `dygraphs`, `DT`, `treemap`
