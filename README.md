@@ -17,3 +17,35 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 * [Data Visualization with `ggplot2`](2.R#L78)
 * [Filtering and summarizing data with `data.table`](2.R#L253)
 * [Wide and long tables](2.R#L351)
+
+### Exercises to prepare for the exam
+
+* Visualize the below variables from the `mtcars` dataset with `ggplot2`:
+    * number of carburetors
+    * horsepower
+    * barplot on the number of carburetors per transmission
+    * boxplot on the horsepower by the number of carburetors
+    * horsepower and weight by the number of carburetors
+    * horsepower and weight by the number of carburetors with a trend line
+	
+* `data.table` exercises using the  `hflights` dataset:
+    * compute the number of cancelled flights
+    * compute the shortest flight on each weekday
+    * compute the average delay to all destination
+    * compute the average delay to all destination per origin
+    * plot the departure and arrival delays
+    * plot the average departure and arrival delays per destination
+    * plot the percentage of cancelled flights per destination
+	
+* Further exercises on the `nycflights13` dataset:
+	* count the number of flights to LAX
+	* count the number of flights to LAX from JFK
+	* compute the average delay (in minutes) for flights from JFK to LAX
+	* which destination has the lowest average delay from JFK?
+	* plot the average delay to all destinations from JFK
+	* plot the distribution of all flight delays to all destinations from JFK
+	* compute a new variable in flights showing the week of day
+	* plot the number of flights per weekday
+	* create a heatmap on the number of flights per weekday and hour of the day
+	* plot the average temperature at noon in `EWR` for each month based on the `weather` dataset
+    * aggregate the `weather` dataset and store as `daily_temperatures` to show the daily average temperatures based on the `EWR` records
