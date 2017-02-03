@@ -33,7 +33,6 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
     * compute the shortest flight on each weekday
     * compute the average delay to all destination
     * compute the average delay to all destination per origin
-    * plot the departure and arrival delays
     * plot the average departure and arrival delays per destination
     * plot the percentage of cancelled flights per destination
 	
@@ -48,4 +47,4 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 	* plot the number of flights per weekday
 	* create a heatmap on the number of flights per weekday and hour of the day
 	* plot the average temperature at noon in `EWR` for each month based on the `weather` dataset
-    * aggregate the `weather` dataset and store as `daily_temperatures` to show the daily average temperatures based on the `EWR` records
+
