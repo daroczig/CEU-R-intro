@@ -19,7 +19,7 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 * [Filtering and summarizing data with `data.table`](2.R#L253)
 * [Wide and long tables](2.R#L351)
 
-### Exercises to prepare for the exam
+### Exercises on data preparations and visualization
 
 * Visualize the below variables from the `mtcars` dataset with `ggplot2`:
     * number of carburetors
@@ -62,3 +62,30 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 * [Multidimensional scaling](3.R#L470)
 * [High level overview on decision trees, bagging, random forest and boosting](http://bit.ly/CEU-R-boosting)
 * [Intro to `h2o`](3.R#L515)
+
+## Exercises on data preps, visualization and modeling
+
+* Plot the weight and horsepower of cars from the `mtcars` dataset (bundled with R, see `?mtcars`)
+* Add a linear trend line to the above plot
+* Add a 3rd degree polynomial model to the above plot
+* Fit a linear model on `hp` to predict weight
+* Estimate the weight based on the above model for a car with 98 horsepower
+* Estimate the weight based on the above model for `Lotus Europa`
+* What's the average fuel consumption?
+* Build a linear model to describe fuel consumption based on the horsepower and weight
+* Compute a new variable in the dataset for the ratio of `wt` and `hp`
+* Plot the distribution of this new variable on a boxplot
+* Create an aggregated dataset on `mtcars` including the average `hp` and `wt` grouped by the number of gears
+* Compute a new variable for fuel consumption using the "liters per 100 kilometers" unit based on `mpg`
+* Which car has the best fuel consumption?
+* Compute `wt2` to store the weight in kilograms based on `wt`
+* Apply k-means clustering on the dataset to split the observations into 3 groups
+* Perform hierarchical clustering on the dataset and plot the dendogram
+* Compare the cluster memberships returned by the hierarchical and k-means methods
+* Build a decision tree to tell if a car has automatic or manual transmission (hint: you might want to convert the number to factor first)
+* Visualize the above decision tree
+* Create a confusion matrix for the above model
+* Use the k-NN algorithm to fit a similar model and decide on the best number of neighbors to use
+* Did you use a training and validation dataset?
+* Visualize the (dis)similarity of cars using PCA or MDS
+* Load the [weight.csv](http://bit.ly/BudapestBI-R-csv) and build a model to classifying observation if BMI is above the normal threshold (25)
