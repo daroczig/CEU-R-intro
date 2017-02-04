@@ -578,7 +578,7 @@ h2o.ls()
 
 ## build the first model
 hflights.rf <- h2o.randomForest(
-    x = names(dt),
+    x = names(hflights.hex),
     y = 'Cancelled',
     training_frame = 'train',
     validation_frame = 'test')
@@ -597,7 +597,7 @@ h2o.splitFrame(data = hflights.hex , ratios = 0.75, destination_frames = c('trai
 
 ## rerun model
 hflights.rf <- h2o.randomForest(
-    x = names(dt),
+    x = names(hflights.hex),
     y = 'Cancelled',
     training_frame = 'train',
     validation_frame = 'test')
@@ -606,7 +606,7 @@ hflights.rf
 
 ## more trees
 hflights.rf <- h2o.randomForest(
-    x = names(dt),
+    x = names(hflights.hex),
     y = 'Cancelled',
     training_frame = 'train',
     validation_frame = 'test',
@@ -614,15 +614,15 @@ hflights.rf <- h2o.randomForest(
 
 ## GBM
 hflights.gbm <- h2o.gbm(
-    x = names(dt),
+    x = names(hflights.hex),
     y = 'Cancelled',
     training_frame = 'train',
     validation_frame = 'test',
     model_id = 'hflights_gbm')
 
-## more trees should help, again !!!
+## more trees should help again, right?
 hflights.gbm <- h2o.gbm(
-    x = names(dt),
+    x = names(hflights.hex),
     y = 'Cancelled',
     training_frame = 'train',
     validation_frame = 'test',
@@ -631,17 +631,12 @@ hflights.gbm <- h2o.gbm(
 
 ## cut back those trees
 hflights.gbm <- h2o.gbm(
-    x = names(dt),
+    x = names(hflights.hex),
     y = 'Cancelled',
     training_frame = 'train',
     validation_frame = 'test',
     model_id = 'hflights_gbm2', ntrees = 250, learn_rate = 0.01)
-
 ##http://docs.h2o.ai/h2o/latest-stable/h2o-docs/data-science/gbm-faq/tuning_a_gbm.html
 
 ## bye
 h2o.shutdown()
-
-
-
-## TODO check GitHub on Windows
