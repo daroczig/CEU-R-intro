@@ -3,7 +3,7 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 ## Table of Contents
 * Jan 28: [Introduction to R and General Programming](#jan-28-210-min-introduction-to-r-and-general-programming)
 * Jan 29: [Data Visualization and Data Preparations](#jan-29-300-min-data-visualization-and-data-preparations)
-* Feb 04: [Modeling](#feb-04-300-modeling)
+* Feb 04: [Modeling](#feb-04-300-min-modeling)
 
 ---
 
