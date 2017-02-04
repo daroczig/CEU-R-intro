@@ -3,6 +3,7 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 ## Table of Contents
 * Jan 28: [Introduction to R and General Programming](#jan-28-210-min-introduction-to-r-and-general-programming)
 * Jan 29: [Data Visualization and Data Preparations](#jan-29-300-min-data-visualization-and-data-preparations)
+* Feb 04: [Modeling](#feb-04-300-modeling)
 
 ---
 
@@ -48,3 +49,16 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 	* create a heatmap on the number of flights per weekday and hour of the day
 	* plot the average temperature at noon in `EWR` for each month based on the `weather` dataset
 
+* [Solutions](3.R#L1)
+
+### Feb 04 (300 min): Modeling
+
+* General overview of the R ecosystem: [slides](http://bit.ly/CEU-R-1)
+* [Recap in linear models](3.R#L100)
+* [Hierarchical and k-means clustering](3.R#L253)
+* [Classification](3.R#L289)
+* [Intro to PCA with image processing](http://bit.ly/CEU-R-PCA)
+* [Dimension reduction with PCA](3.R#L395)
+* [Multidimensional scaling](3.R#L470)
+* [High level overview on decision trees, bagging, random forest and boosting](http://bit.ly/CEU-R-boosting)
+* [Intro to `h2o`](3.R#L515)
