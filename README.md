@@ -93,7 +93,7 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 * Visualize the (dis)similarity of cars using PCA or MDS
 * Load the [weight.csv](http://bit.ly/BudapestBI-R-csv) and build a model to classifying observation if BMI is above the normal threshold (25)
 
-### Feb 5 (90 min): Exam
+### Feb 05 (90 min): Exam
 
 1. Transform the `mtcars` dataset to a new `data.table` object called `dt`
 2. Count the number of cars with less than `4` gears
@@ -114,3 +114,35 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 17. Apply k-means or hierarchical clustering on this dataset to split the observations into 3 groups, and show the number of observations in the clusters
 
 * Bonus points: Build and visualize a decision tree to tell if a car was made in America or Europe, show the confusion matrix, do the same with k-NN
+
+### Feb 05 (60 min): R Markdown
+
+Resources:
+* [UK dialect maps in a web service](http://blog.rapporter.net/2013/07/uk-dialect-maps.html)
+* [useR! 2015 tutorial](https://github.com/daroczig/user2015-markdown-tutorial)
+* [RStudio R Markdown cheat sheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+
+### Feb 05 (60 min): Git and GitHub
+
+1. Register an account at https://github.com
+2. Install git from https://git-scm.com/
+3. Install R from https://www.r-project.org/
+4. Install RStudio from https://www.rstudio.com/products/RStudio/#Desktop
+5. Verify that in RStudio, you can see the path of the `git` executable binary in the Tools/Global Options menu's "Git/Svn" tab -- if not, then you might have to restart RStudio (if you installed git after starting RStudio) or installed git by not adding that to the PATH on Windows. Either way, browse the "git executable" manually (in some `bin` folder look for thee `git` executable file).
+6. Create an RSA key (optionally with a passphrase for increased security -- that you have to enter every time you push and pull to and from GitHub). Copy the public key and add that to you SSH keys on your GitHub profile.
+7. Create a new project choosing "version control", then "git" and paste the SSH version of the repo URL copied from GitHub in the pop-up -- now RStudio should be able to download the repo. If it asks you to accept GitHub's fingerprint, say "Yes".
+8. If RStudio/git is complaining that you have to set your identity, click on the "Git" tab in the top-right panel, then click on the Gear icon and then "Shell" -- here you can set your username and e-mail address in the command line, so that RStudio/git integration can work. Use the following commands:
+
+    ```
+    $ git config --global user.name "Your Name"
+    $ git config --global user.email "Your e-mail address"
+    ```
+    Close this window, commit, push changes, all set.
+
+Find more resources in Jenny Bryan's "[Happy Git and GitHub for the useR](http://happygitwithr.com/)" tutorial
+
+### Feb 05 (90 min): Shiny dashboards
+
+Resources:
+* [Network analysis of the Hungarian interbank lending market](https://daroczig.shinyapps.io/rinfinance_Berlinger-Daroczi-demo/)
+* [RStudio Shiny cheat sheet](http://shiny.rstudio.com/images/shiny-cheatsheet.pdf)
