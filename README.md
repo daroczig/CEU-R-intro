@@ -6,6 +6,7 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 * [Exercises on data preparations and visualization](#exercises-on-data-preparations-and-visualization)
 * Feb 04: [Modeling](#feb-04-300-min-modeling)
 * [Exercises for the exam](#exercises-on-data-preps-visualization-and-modeling)
+* Feb 05: [Exam](#feb-05-90-min-exam)
 
 ---
 
@@ -91,3 +92,25 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 * Did you use a training and validation dataset?
 * Visualize the (dis)similarity of cars using PCA or MDS
 * Load the [weight.csv](http://bit.ly/BudapestBI-R-csv) and build a model to classifying observation if BMI is above the normal threshold (25)
+
+### Feb 5 (90 min): Exam
+
+1. Transform the `mtcars` dataset to a new `data.table` object called `dt`
+2. Count the number of cars with less than `4` gears
+3. Count the number of cars with more than `4` gears and less than 90 horsepower
+4. What's the average weight of cars with `4` gears?
+5. What's the weight of the car with the best fuel consumption?
+6. Plot the distribution of the number of cylinders
+7. Plot the distribution of the number of cylinders grouped by carburetors
+8. Plot the average weight of cars grouped by the number of cylinders
+9. Plot the distribution of the performance of the cars (horsepower) per number of cylinders
+10. Install and load the `ISLR` package and use its `Auto` dataset for the below exercises
+11. Plot the weight and horsepower of cars
+12. Add a linear trend line to the above plot
+13. Fit a linear model using the weight of cars to predict acceleration
+14. What's the estimated acceleration of a car with `weight = 3`?
+15. Filter for cars from America (1) and Europe (2) and store the results in a new object called `auto` (mind the lower case letters)
+16. Remove the `name` column
+17. Apply k-means or hierarchical clustering on this dataset to split the observations into 3 groups, and show the number of observations in the clusters
+
+* Bonus points: Build and visualize a decision tree to tell if a car was made in America or Europe, show the confusion matrix, do the same with k-NN
