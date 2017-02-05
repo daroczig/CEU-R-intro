@@ -117,6 +117,12 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 
 ### Feb 05 (60 min): R Markdown
 
+Create a new R Markdown document -- it might ask you to install a bunch of packages. If you get an error due to not being able to install `jsonlite`, run the following command before trying this again:
+
+```r
+install.packages('jsonlite', dependencies = TRUE)
+```
+
 Resources:
 * [UK dialect maps in a web service](http://blog.rapporter.net/2013/07/uk-dialect-maps.html)
 * [useR! 2015 tutorial](https://github.com/daroczig/user2015-markdown-tutorial)
