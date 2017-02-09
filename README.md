@@ -117,13 +117,17 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 
 ### Feb 05 (60 min): R Markdown
 
-Create a new R Markdown document -- it might ask you to install a bunch of packages. If you get an error due to not being able to install `jsonlite`, run the following command before trying this again:
+Create a new R Markdown document -- it might ask you to install a bunch of packages. If you get an error due to not being able to install `jsonlite` or `rmarkdown`, run the following commands before trying this again:
 
 ```r
 install.packages('jsonlite', dependencies = TRUE)
+install.packages('rmarkdown', dependencies = TRUE)
 ```
 
-Resources:
+Example document: [intro-to-markdown.Rmd](4/intro-to-markdown.Rmd)
+
+Further examples and resources:
+
 * [UK dialect maps in a web service](http://blog.rapporter.net/2013/07/uk-dialect-maps.html)
 * [useR! 2015 tutorial](https://github.com/daroczig/user2015-markdown-tutorial)
 * [RStudio R Markdown cheat sheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
@@ -149,6 +153,12 @@ Find more resources in Jenny Bryan's "[Happy Git and GitHub for the useR](http:/
 
 ### Feb 05 (90 min): Shiny dashboards
 
-Resources:
+Example document:
+
+* [ui.R](4/ui.R)
+* [server.R](4/server.R)
+
+Further examples and resources:
+
 * [Network analysis of the Hungarian interbank lending market](https://daroczig.shinyapps.io/rinfinance_Berlinger-Daroczi-demo/)
 * [RStudio Shiny cheat sheet](http://shiny.rstudio.com/images/shiny-cheatsheet.pdf)
