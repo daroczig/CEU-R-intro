@@ -6,7 +6,8 @@ This is the R script repository of the "[Tools for Analytics Lab - R-track](http
 * [Exercises on data preparations and visualization](#exercises-on-data-preparations-and-visualization)
 * Feb 04: [Modeling](#feb-04-300-min-modeling)
 * [Exercises for the exam](#exercises-on-data-preps-visualization-and-modeling)
-* Feb 05: [Exam](#feb-05-90-min-exam)
+* Feb 05: [Exam](#feb-05-90-min-exam), [Introduction to R Markdown](#feb-05-60-min-r-markdown), [Using git and GitHub](#feb-05-60-min-git-and-github), [Introduction to Shiny](#feb-05-90-min-shiny-dashboards)
+* [Home Assignment](#home-assignment)
 
 ---
 
