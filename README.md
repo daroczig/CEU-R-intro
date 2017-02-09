@@ -162,3 +162,31 @@ Further examples and resources:
 
 * [Network analysis of the Hungarian interbank lending market](https://daroczig.shinyapps.io/rinfinance_Berlinger-Daroczi-demo/)
 * [RStudio Shiny cheat sheet](http://shiny.rstudio.com/images/shiny-cheatsheet.pdf)
+
+### Home Assignment
+
+Use the `nycflights13` dataset and create either an R Markdown document **or** a Shiny application to demonstrate your R skills. You can use any of the related datasets:
+
+```r
+> data(package = 'nycflights13')
+Data sets in package ‘nycflights13’:
+  airlines                Airline names.
+  airports                Airport metadata
+  flights                 Flights data
+  planes                  Plane metadata.
+  weather                 Hourly weather data
+```
+
+If you decide to write an R Markdown document, then include at least
+* some exploratory data analysis on the available variables,
+* feature engineering and enriching the `flights` dataset (eg weekday or grouped hour of the day),
+* a model predicting if a flight will be late by more than 15 minutes at the destination.
+
+If working on a Shiny application, the create a tool for exploratory data analysis on the `flights` dataset including
+* inputs to filter data on date and distance,
+* at least one static plot,
+* and a HTML table.
+
+Please upload your project to Moodle before Feb 28 2017. Your submission should include:
+* the source of your R Markdown document along with a PDF export **or**
+* the `ui.R` and `server.R` (and any other files required to run the application) in a zip archive
