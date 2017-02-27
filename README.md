@@ -188,6 +188,6 @@ If working on a Shiny application, the create a tool for exploratory data analys
 * at least one static plot,
 * and a HTML table.
 
-Please upload your project to Moodle before Feb 28 2017. Your submission should include:
+Please upload your project to Moodle no later than Feb 28 2017. Your submission should include:
 * the source of your R Markdown document along with a PDF export **or**
 * the `ui.R` and `server.R` (and any other files required to run the application) in a zip archive
