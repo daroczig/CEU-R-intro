@@ -4,12 +4,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title>Tools for Analytics Lab - R-track</title>
+  <title>Data Analysis 1a: Foundation of Data management in R</title>
   <style type="text/css">code{white-space: pre;}</style>
 </head>
 <body>
 <div id="header">
-<h1 class="title">Tools for Analytics Lab - R-track</h1>
+<h1 class="title">Data Analysis 1a: Foundation of Data management in R</h1>
 </div>
 <table>
 <tbody>
@@ -23,7 +23,7 @@
 </tr>
 <tr class="odd">
 <td align="left"><strong>Semester</strong></td>
-<td align="left">Winter, 2016</td>
+<td align="left">Fall, 2017/2018</td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Course level</strong></td>
@@ -36,101 +36,138 @@
 </tbody>
 </table>
 <h2 id="course-description">Course Description</h2>
-<p>This is an introductory course on how to use the R programming language and software environment for data manipulations, exploratory data analysis, statistical modeling, machine learning, data visualizations, automated reporting and self-service dashboards.</p>
+<p>This is an introductory course on how to use the R programming language and software environment for data manipulations and munging, exploratory data analysis and data visualizations.</p>
 <h2 id="course-requirements">Course Requirements</h2>
-<p>Assessment is through in-class exam (50%) and take-home assignments (50%).</p>
+<p>Assessment is through in-class quizzes (20%), exam (50%) and homeworks (30%). The weekly quizzes and the final in-class exam use the datacamp.com platform, the weekly homeworks will alternate between individual programming exercises (2nd and 4th week) hosted on Datacamp and group assignments (3rd and 6th week) with free choice of tools.</p>
+<h2 id="technical-prerequisites">Technical Prerequisites</h2>
+<p>If you have not filled in the <a href="https://docs.google.com/forms/d/1niYbSj18C6fjF-So7sxS58NfjKed8l2Lv_BGKm3m-ng">Introduce Yourself</a> survey, please do so now.</p>
+<p>Although the required software is already installed on the computers in the School Lab, but if you plan to use your own laptop, please make sure to install the below items <strong>before</strong> attending the first class:</p>
+<ul>
+<li><a href="https://cran.r-project.org">R</a></li>
+<li><a href="https://www.rstudio.com/products/rstudio/download/">RStudio Desktop with Open Source License</a></li>
+<li><a href="https://git-scm.com">git</a></li>
+</ul>
+<p>More detailed instructions can be found on the <a href="https://github.com/daroczig/CEU-R-lab">class GitHub page</a>. Open a <a href="https://github.com/daroczig/CEU-R-lab/issues">GitHub ticket</a> in case of any question.</p>
 <h2 id="outline">Outline</h2>
-<h3 id="jan-28-1300-1430-pm-60-min-introduction-to-r-and-general-programming">Jan 28, 13:00-14:30 pm (60 min): Introduction to R and General Programming</h3>
+<h3 id="week-1-200-min">Week 1 (200 min)</h3>
+<p>General Introduction into the R Ecosystem (50 mins):</p>
+<!-- http://bit.ly/CEU-R-1 -->
 <ul>
 <li>Downloading and installing R</li>
-<li>History of R, general ecosystem, R packages, CRAN</li>
+<li>History of R, R packages, CRAN</li>
 <li>R community, R-bloggers, StackOverflow, Coursera, DataCamp</li>
 <li>R User Groups &amp; meetups</li>
 </ul>
 <!-- end of list -->
+<p>Demonstration of a Data Analysis Project in R (50 mins):</p>
+<ul>
+<li>hotel price/stars dataset (TODO <span class="citation">@Gabor</span>?)</li>
+</ul>
+<!-- end of list -->
+<p>Brief Overview on R Coding Tools (25 mins):</p>
 <ul>
 <li>RStudio</li>
 <li>git, GitHub</li>
 </ul>
 <!-- end of list -->
+<p>R Syntax Basics (45 mins):</p>
 <ul>
-<li>R Syntax: Variables, functions, descriptive statistics</li>
-<li>Loading data from text files</li>
+<li>Constants, operators, functions, variables</li>
+<li>Random numbers</li>
+<li>Vectors and vector indexing</li>
+<li>Simple descriptive stats</li>
+<li>Loops</li>
+<li>Conditional expressions</li>
 </ul>
 <!-- end of list -->
+<p>The Power of R (30 mins):</p>
 <ul>
-<li>Univariate statistics</li>
-<li>Statistics with two variables: cross-tables, correlation, ANOVA</li>
-<li>Simpson's paradox</li>
+<li>Applying PCA on an image for outlier-detection</li>
+<li>Visualizing MDS on a distance matrix</li>
 </ul>
-<h3 id="jan-28-1500-1600-pm-60-min-first-steps-with-data-visualization">Jan 28, 15:00-16:00 pm (60 min): First Steps with Data Visualization</h3>
+<p>Reference Datasets:</p>
 <ul>
+<li><a href="http://bit.ly/CEU-R-NASA">NASA Image</a></li>
+<li><a href="http://bit.ly/CEU-R-distances">Distance Matrix of European Cities</a></li>
+</ul>
+<h3 id="week-2-200-min">Week 2 (200 min)</h3>
+<p>A Systematic Introduction into Data Types (50 mins)</p>
+<ul>
+<li>Levels of measurement (nominal, ordinal, interval, ratio scale)</li>
+<li>Vector types</li>
+<li><code>data.frame</code> objects, rows and columns, indexing</li>
+<li>Characteristics of tidy data</li>
+</ul>
+<p>Basic Data Transformations (50 mins):</p>
+<ul>
+<li>Create new variables in a <code>data.frame</code></li>
+<li>Filter rows and columns</li>
+<li>Merging datasets</li>
+</ul>
+<p>Introduction to <code>data.table</code> for More Complex Data Transformations (100 mins):</p>
+<ul>
+<li>Filtering and ordering data</li>
+<li>Summaries and aggregates</li>
+<li>New variables</li>
+<li>Relational data</li>
+<li>Joins on Keys</li>
+<li>Introduction into fuzzy joins</li>
+<li>Transforming wide and long tables</li>
+</ul>
+<p>Reference Datasets:</p>
+<ul>
+<li><a href="http://bit.ly/CEU-R-heights">Weight and Height of Students</a></li>
+</ul>
+<h3 id="week-3-200-min">Week 3 (200 min)</h3>
+<p>EDA - Univariate Descriptive Statistics + crosstabs + correlation + ANOVA</p>
+<p>EDA - First Steps with Data Visualization:</p>
+<ul>
+<li>Why not Use Pie Charts</li>
 <li>Plots outside of Excel: <code>dotchart</code> and <code>violinplot</code> examples</li>
 <li>The Grammar of Graphics in R with <code>ggplot2</code></li>
-<li>Using interactive JavaScript libraries with <code>htmlwidgets</code></li>
+<li>Using labels for variable names</li>
 </ul>
-<h3 id="jan-29-930-1230-150-min-30-min-break-data-preparation">Jan 29, 9:30-12:30 (150 min + 30 min break): Data Preparation</h3>
+<h3 id="week-4-200-min">Week 4 (200 min)</h3>
+<p>Introduction to Non-tabular Data Types:</p>
 <ul>
-<li>Loading data from relational databases -- using <code>sqlite</code></li>
-<li>Filtering and summarizing data with <code>plyr</code>, <code>dplyr</code> and <code>data.table</code></li>
-<li>Merging and left/right/inner/outer/anti-joining data</li>
-<li>Wide and long tables with <code>reshape2</code> and <code>tidyr</code></li>
-<li>Regular expressions</li>
-<li>Dealing with date and time</li>
-<li>Other dirty data problems (missing values, data imputation, outliers)</li>
+<li>Time-series</li>
+<li>Spatial data</li>
+<li>Network data</li>
 </ul>
-<h3 id="jan-29-1300-1600-150-min-30-min-break-an-r-introduction-to-modeling">Jan 29, 13:00-16:00 (150 min + 30 min break): An R Introduction to Modeling</h3>
+<p>Data Transformations:</p>
 <ul>
-<li>Correlation, causality</li>
-<li>Linear regression</li>
-<li>Goodness of fit</li>
-<li>Polynomial regression</li>
-<li>Overfitting</li>
-<li>Confounders</li>
-<li>Poisson/negative binomial regression</li>
+<li>Converting Numeric Variables into Factors</li>
+<li>Date Operations</li>
+<li>String Parsing</li>
+<li>Geocoding</li>
 </ul>
-<h3 id="feb-4-930-1100-90-min-supervised-and-unsupervised-ml-methods-for-qualitative-data">Feb 4, 9:30-11:00 (90 min): Supervised and Unsupervised ML Methods for Qualitative Data</h3>
+<p>Dirty Data Problems:</p>
 <ul>
-<li>Hierarchical and k-means clustering</li>
-<li>Training and test dataset, cross validation, confusion matrix, accuracy, ROC curve</li>
-<li>Logistic regression</li>
-<li>k-Nearest Neighbors algorithm</li>
-<li>Decision trees with <code>rpart</code>, <code>caret</code> and <code>C50</code></li>
+<li>missing values</li>
+<li>data imputation</li>
+<li>outliers</li>
 </ul>
-<h3 id="feb-4-1130-1230-60-min-dimension-reduction">Feb 4, 11:30-12:30 (60 min): Dimension Reduction</h3>
+<h3 id="week-5-200-min">Week 5 (200 min)</h3>
+<p>Data Sources:</p>
 <ul>
-<li>Principal Component Analysis</li>
-<li>Discriminant Analysis</li>
-<li>Multidimensional Scaling</li>
-<li>Handling geospatial data in R</li>
+<li><code>sqlite</code> examples for relational databases</li>
+<li>Loading SPSS and SAS files</li>
+<li>Reading from Excel and Google Spreadsheets</li>
+<li>API and web scraping examples</li>
 </ul>
-<h3 id="feb-4-1300-1600-150-min-30-min-break-supervised-ml-methods-for-quantitative-data">Feb 4, 13:00-16:00 (150 min + 30 min break): Supervised ML Methods for Quantitative Data</h3>
+<p>Reference Datasets:</p>
 <ul>
-<li>Decision trees</li>
-<li>Random forest with <code>randomForest</code> and <code>H2O</code></li>
-<li>Gradient boosting</li>
+<li><a href="http://bit.ly/CEU-R-Berkeley">Bickel et al, 1975</a></li>
+<li>SQlite database</li>
 </ul>
-<!-- end of list -->
-<ul>
-<li>Consulting on exam exercises</li>
-</ul>
-<h3 id="feb-5-930-1100-90-min-exam">Feb 5, 9:30-11:00 (90 min): Exam</h3>
-<p>Develop R code to load, analyze, model and visualize data.</p>
-<h3 id="feb-5-1130-1230-60-min-dynamic-reports-and-reproducible-research">Feb 5, 11:30-12:30 (60 min): Dynamic Reports and Reproducible Research</h3>
+<h3 id="week-6-200-min">Week 6 (200 min)</h3>
+<p>In-class exam (90 min)</p>
+<p>Dynamic Reports and Reproducible Research:</p>
 <ul>
 <li>Introduction to markdown</li>
 <li>First steps with <code>knitr</code></li>
 <li>Markdown in R with <code>pander</code></li>
 <li>Chunk options and document formats in <code>rmarkdown</code> and <code>kintr</code></li>
-</ul>
-<h3 id="feb-5-1300-1600-150-min-30-min-break-interactive-data-analysis-and-dashboards">Feb 5, 13:00-16:00 (150 min + 30 min break): Interactive Data Analysis and Dashboards</h3>
-<ul>
-<li>Introduction to <code>shiny</code> and <code>shinydashboard</code></li>
-<li><code>htmlwidgets</code> examples, including <code>networkd3d</code>, <code>leaflet</code>, <code>dygraphs</code>, <code>DT</code>, <code>treemap</code></li>
-</ul>
-<!-- end of list -->
-<ul>
-<li>Consulting on take-home assignments</li>
 </ul>
 </body>
 </html>
