@@ -26,7 +26,7 @@ Although the required software is already installed on the computers in the Scho
 - [RStudio Desktop with Open Source License](https://www.rstudio.com/products/rstudio/download/)
 - [git](https://git-scm.com)
 
-More detailed instructions can be found on the [class GitHub page](https://github.com/daroczig/CEU-R-lab). Open a [GitHub ticket](https://github.com/daroczig/CEU-R-lab/issues) in case of any question.
+More detailed instructions and the most recent version of this document can be found on the [class GitHub page](https://github.com/daroczig/CEU-R-lab). Open a [GitHub ticket](https://github.com/daroczig/CEU-R-lab/issues) in case of any question.
 
 ## Outline
 
@@ -45,7 +45,7 @@ General Introduction into the R Ecosystem (50 mins):
 
 Demonstration of a Data Analysis Project in R (50 mins):
 
-* hotel price/stars dataset (TODO @Gabor?)
+* hotel price/stars dataset
 
 <!-- end of list -->
 
@@ -125,6 +125,11 @@ Introduction to Non-tabular Data Types:
 * Spatial data
 * Network data
 
+Big Data Problems:
+
+* What is Big Data
+* 4V: volume, variety, velocity, veracity
+
 Data Transformations:
 
 * Converting Numeric Variables into Factors
@@ -136,7 +141,10 @@ Dirty Data Problems:
 
 * missing values
 * data imputation
+* duplicates
+* forms of data dates 
 * outliers
+* spelling
 
 ### Week 5 (200 min)
 
@@ -146,6 +154,13 @@ Data Sources:
 * Loading SPSS and SAS files
 * Reading from Excel and Google Spreadsheets
 * API and web scraping examples
+
+Case Study: Who are the better CEO, men or women?
+* Learning about data problems
+* Managing time features
+* Joing datasets
+* EDA 
+* cross tabulation
 
 Reference Datasets:
 
