@@ -156,6 +156,7 @@ Data Sources:
 * API and web scraping examples
 
 Case Study: Who are the better CEO, men or women?
+
 * Learning about data problems
 * Managing time features
 * Joing datasets
