@@ -41,22 +41,26 @@ General Introduction into the R Ecosystem (50 mins):
 * R community, R-bloggers, StackOverflow, Coursera, DataCamp
 * R User Groups & meetups
 
+The Power of R (50 mins):
+
+* Applying PCA on an image for outlier-detection
+* Visualizing MDS on a distance matrix
+
+Reference Datasets:
+
+- [NASA Image](http://bit.ly/CEU-R-NASA)
+- [Distance Matrix of European Cities](http://bit.ly/CEU-R-distances)
+
 <!-- end of list -->
 
-Demonstration of a Data Analysis Project in R (50 mins):
-
-* hotel price/stars dataset
-
-<!-- end of list -->
-
-Brief Overview on R Coding Tools (25 mins):
+Brief Overview on R Coding Tools (30 mins):
 
 * RStudio
 * git, GitHub
 
 <!-- end of list -->
 
-R Syntax Basics (45 mins):
+R Syntax Basics (70 mins): h & w demo adatok
 
 * Constants, operators, functions, variables
 * Random numbers
@@ -66,16 +70,6 @@ R Syntax Basics (45 mins):
 * Conditional expressions
 
 <!-- end of list -->
-
-The Power of R (30 mins):
-
-* Applying PCA on an image for outlier-detection
-* Visualizing MDS on a distance matrix
-
-Reference Datasets:
-
-- [NASA Image](http://bit.ly/CEU-R-NASA)
-- [Distance Matrix of European Cities](http://bit.ly/CEU-R-distances)
 
 ### Week 2 (200 min)
 
@@ -95,27 +89,32 @@ Basic Data Transformations (50 mins):
 Introduction to `data.table` for More Complex Data Transformations (100 mins):
 
 * Filtering and ordering data
-* Summaries and aggregates
+* Summaries and aggregates (eg country or city-level)
 * New variables
 * Relational data
-* Joins on Keys
+* Joins on Keys (eg GDP per capita)
 * Introduction into fuzzy joins
 * Transforming wide and long tables
 
 Reference Datasets:
 
-- [Weight and Height of Students](http://bit.ly/CEU-R-heights)
+- hotels.com
 
 ### Week 3 (200 min)
 
-EDA - Univariate Descriptive Statistics + crosstabs + correlation + ANOVA
+EDA - Univariate Descriptive Statistics + crosstabs + correlation
 
 EDA - First Steps with Data Visualization:
 
 * Why not Use Pie Charts
 * Plots outside of Excel: `dotchart` and `violinplot` examples
+* Box plots
 * The Grammar of Graphics in R with `ggplot2`
 * Using labels for variable names
+
+Reference Datasets:
+
+- hotels.com
 
 ### Week 4 (200 min)
 
@@ -165,8 +164,7 @@ Case Study: Who are the better CEO, men or women?
 
 Reference Datasets:
 
-- [Bickel et al, 1975](http://bit.ly/CEU-R-Berkeley)
-- SQlite database
+- Company and Business Databases
 
 ### Week 6 (200 min)
 
