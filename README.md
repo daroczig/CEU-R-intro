@@ -36,6 +36,15 @@ Optionals steps I highly suggest to do as well:
 
 Find more resources in Jenny Bryan's "[Happy Git and GitHub for the useR](http://happygitwithr.com/)" tutorial if in doubt or [contact me](#contact).
 
+## Class Schedule
+
+Full-time and part-time students attend the class on different weekdays, so below I will refer to only week numbers.
+
+### Week 1 (200 min): Introduction to R and General Programming
+
+* General overview of the R ecosystem: [slides](http://bit.ly/CEU-R-1)
+* Introduction to R: [variables, functions and vectors](https://github.com/daroczig/CEU-R-lab/blob/master/1.R)
+
 ## Contact
 
 File a [GitHub ticket](https://github.com/daroczig/CEU-R-lab/issues).

@@ -14,11 +14,14 @@ This is an introductory course on how to use the R programming language and soft
 
 ## Course Requirements
 
-Assessment is through in-class quizzes (20%), exam (50%) and homeworks (30%). The weekly quizzes and the final in-class exam use the datacamp.com platform, the weekly homeworks will alternate between individual programming exercises (2nd and 4th week) hosted on Datacamp and group assignments (3rd and 6th week) with free choice of tools.
+Assessment is through in-class quizzes (20%), exam (50%) and homeworks (30%). The weekly quizzes and the final in-class exam use the datacamp.com platform, the weekly homeworks will alternate between individual programming exercises (1st, 2nd and 4th week) hosted on Datacamp and group assignments (3rd and 6th week) with free choice of tools.
 
 ## Technical Prerequisites
 
-If you have not filled in the [Introduce Yourself](https://docs.google.com/forms/d/1niYbSj18C6fjF-So7sxS58NfjKed8l2Lv_BGKm3m-ng) survey, please do so now.
+If you have not filled in the "Introduce Yourself" survey, please do so now:
+
+- [Business Analytics program](https://docs.google.com/forms/d/1niYbSj18C6fjF-So7sxS58NfjKed8l2Lv_BGKm3m-ng)
+- [Other MA, MSc and PhD programs](https://docs.google.com/forms/d/e/1FAIpQLScIX0_ZqafAzyiCZ_eEWzQta9s75vH94TPJkYV0sYhqXLS6ow)
 
 Although the required software is already installed on the computers in the School Lab, but if you plan to use your own laptop, please make sure to install the below items **before** attending the first class:
 
@@ -58,9 +61,11 @@ Brief Overview on R Coding Tools (30 mins):
 * RStudio
 * git, GitHub
 
+Find more resources in Jenny Bryan's "[Happy Git and GitHub for the useR](http://happygitwithr.com/)" tutorial.
+
 <!-- end of list -->
 
-R Syntax Basics (70 mins): h & w demo adatok
+R Syntax Basics (70 mins):
 
 * Constants, operators, functions, variables
 * Random numbers
