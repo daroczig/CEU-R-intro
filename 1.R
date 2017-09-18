@@ -13,7 +13,8 @@ pi
 letters
 LETTERS
 
-letters[1:3]
+str(letters)
+letters[1]
 
 month.name
 month.abb
@@ -55,6 +56,9 @@ f(pi)
 
 ## combine values into a vector
 c(1, 2, 3, 4, 5)
+
+letters[c(1, 2, 3, 4, 5)]
+
 1:5
 seq(1, 5)
 ?seq
