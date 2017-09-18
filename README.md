@@ -43,7 +43,7 @@ Full-time and part-time students attend the class on different weekdays, so belo
 ### Week 1 (200 min): Introduction to R and General Programming
 
 * General overview of the R ecosystem: [slides](http://bit.ly/CEU-R-1)
-* Introduction to R: [variables, functions and vectors](https://github.com/daroczig/CEU-R-lab/blob/master/1.R)
+* Introduction to R: [variables, functions, loops, vectors and data frames](https://github.com/daroczig/CEU-R-lab/blob/master/1.R)
 
 ## Contact
 
