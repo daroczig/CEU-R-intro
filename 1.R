@@ -109,21 +109,6 @@ plot(cumsum(round(runif(25))*2 - 1), type = 's')
 ## a much simpler solution for the above
 plot(cumsum(sample(c(-1, 1), 25, replace = TRUE)), type = 's')
 
-## looping
-for (i in 2:6) {
-  lines(cumsum(round(runif(25))*2 - 1), type = 's', col = i)
-}
-
-## TODO check the distribution of values after the 25th iteration
-x <- sum(round(runif(25))*2 - 1)
-for (i in 1:50) { # 5000
-    x <- c(x, sum(round(runif(25))*2 - 1))
-}
-hist(x)
-## rings a bell?
-
-hist(replicate(5000, sum(round(runif(25))*2 - 1)))
-
 ## #############################################################################
 ## from vectors to data frames
 ## #############################################################################
@@ -143,6 +128,10 @@ lm(w ~ h)
 fit <- lm(w ~ h)
 summary(fit)
 
+56 * fit$coefficients[2] + fit$coefficients[1]
+56 * 1.3462 + -146.1538
+predict(fit, list(h = 56))
+
 ## plot this model
 plot(h, w, main = "Demo", xlab = 'Height', ylab = 'Weight')
 abline(fit, col = 'red')
@@ -156,96 +145,3 @@ cor(df)
 lm(df)
 
 str(df)
-
-df[1, ]
-df[, 1]
-df[3, 2]
-df$weight
-df$weight[2]
-
-## TODO how do you get 174 from the above matrix
-df[1, 2]
-
-## compute Body Mass Index (BMI) by:
-## a person's weight in kilograms divided by the square of height in meters
-df$height <- df$height / 100
-df
-df$bmi <- df$weight / df$height^2
-df
-
-summary(df$bmi)
-
-## import more data with similar structure
-df <- read.csv('http://bit.ly/CEU-R-heights')
-str(df)
-
-## TODO compute weight in kg, height in cm and BMI
-df$height <- df$heightIn * 2.54
-df$weight <- df$weightLb * 0.45
-df$bmi <- df$weight / (df$height/100)^2
-str(df)
-
-## #############################################################################
-## intro to plots
-## #############################################################################
-
-## draw a histogram
-hist(df$bmi)
-## add two vertical lines with the limits of normal BMI
-abline(v = c(18.5, 25), col = 'red')
-
-## density plot on the same variable
-plot(density(df$bmi))
-
-## boxplot on the same variable
-boxplot(df$bmi)
-## with a split by gender
-boxplot(bmi ~ sex, df)
-
-library(beanplot)
-beanplot(df$bmi)
-beanplot(bmi ~ sex, df)
-
-## example on the advantages of vioplot over boxplot
-boxplot(
-  rbeta(1e3, 0.1, 0.1),
-  runif(1e3)*2-0.5,
-  rnorm(1e3, 0.5, 0.75))
-
-beanplot(
-  rbeta(1e3, 0.1, 0.1),
-  runif(1e3)*2-0.5,
-  rnorm(1e3, 0.5, 0.75))
-
-## some pie chart alternatives
-pie(table(df$sex))
-barplot(table(df$sex))
-dotchart(table(df$sex))
-dotchart(table(df$sex), xlim = c(0, 150))
-
-## exploratory data analysis
-pairs(df)
-
-library(GGally)
-ggpairs(df)
-
-library(pairsD3)
-pairsD3(df)
-
-## #############################################################################
-## intro to stats
-## #############################################################################
-
-t.test(height ~ sex, data = df)
-t.test(weight ~ sex, data = df)
-t.test(bmi ~ sex, data = df)
-
-aov(height ~ sex, data = df)
-summary(aov(height ~ sex, data = df))
-summary(aov(weight ~ sex, data = df))
-
-## Post hoc tests => Tukey Honest Significant Differences
-TukeyHSD(aov(height ~ sex, data = df))
-TukeyHSD(aov(weight ~ sex, data = df))
-TukeyHSD(aov(bmi ~ sex, data = df))
-
