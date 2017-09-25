@@ -110,7 +110,7 @@ plot(cumsum(round(runif(25))*2 - 1), type = 's')
 plot(cumsum(sample(c(-1, 1), 25, replace = TRUE)), type = 's')
 
 ## #############################################################################
-## from vectors to data frames
+## association between two vectors
 ## #############################################################################
 
 ## custom vectors -> combine values into vector

@@ -45,6 +45,10 @@ Full-time and part-time students attend the class on different weekdays, so belo
 * General overview of the R ecosystem: [slides](http://bit.ly/CEU-R-1)
 * Introduction to R: [variables, functions, loops, vectors and data frames](https://github.com/daroczig/CEU-R-lab/blob/2018/1.R)
 
+### Week 2 (200 min): Introduction to data frames
+
+* Introduction to R: [variables, functions, loops, vectors and data frames](https://github.com/daroczig/CEU-R-lab/blob/2018/1.R)
+
 ## Contact
 
 File a [GitHub ticket](https://github.com/daroczig/CEU-R-lab/issues).
