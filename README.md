@@ -1,5 +1,16 @@
 This is the R script repository of the "[Data Analysis 1a: Foundation of Data management in R](https://economics.ceu.edu/courses/data-analysis-1a-foundation-data-management-r)" course, part of the [MSc in Business Analytics](https://economics.ceu.edu/program/master-science-business-analytics) at CEU. For the previous years, see the [2016](https://github.com/daroczig/CEU-R-lab/tree/2016) and [2017 Winter](https://github.com/daroczig/CEU-R-lab/tree/2017) branches.
 
+## Table of Contents
+
+* [Syllabus](https://github.com/daroczig/CEU-R-lab#syllabus)
+* [Technical Prerequisites](https://github.com/daroczig/CEU-R-lab#technical-prerequisites)
+* [Class Schedule](https://github.com/daroczig/CEU-R-lab#class-schedule)
+
+    * [Week 1: Introduction to R and General Programming](https://github.com/daroczig/CEU-R-lab#week-1-200-min-introduction-to-r-and-general-programming)
+    * [Week 2: Introduction to Data Frames](https://github.com/daroczig/CEU-R-lab#week-2-200-min-introduction-to-data-frames)
+
+* [Contact](https://github.com/daroczig/CEU-R-lab#contacts)
+
 ## Syllabus
 
 Please find in the `syllabus` folder of this repository.
@@ -43,11 +54,24 @@ Full-time and part-time students attend the class on different weekdays, so belo
 ### Week 1 (200 min): Introduction to R and General Programming
 
 * General overview of the R ecosystem: [slides](http://bit.ly/CEU-R-1)
-* Introduction to R: [variables, functions, loops, vectors and data frames](https://github.com/daroczig/CEU-R-lab/blob/2018/1.R)
+* [Basic math operations](https://github.com/daroczig/CEU-R-lab/blob/2018/1.R#L1)
+* [Functions](https://github.com/daroczig/CEU-R-lab/blob/2018/1.R#L37)
+* [Simulation of random walk in 1D](https://github.com/daroczig/CEU-R-lab/blob/2018/1.R#L90)
+* [Association between vectors](https://github.com/daroczig/CEU-R-lab/blob/2018/1.R#L112)
 
-### Week 2 (200 min): Introduction to data frames
+* Supplementary materials: [loops](https://github.com/daroczig/CEU-R-lab/blob/2018/1-extra.R#L1)
 
-* Introduction to R: [variables, functions, loops, vectors and data frames](https://github.com/daroczig/CEU-R-lab/blob/2018/1.R)
+### Week 2 (200 min): Introduction to Data Frames
+
+You can find the recommended reading on data types and an overview of the `hotels` dataset uploaded to Moodle.
+
+Also note, that as said in the class, `data.table` is not the only available `data.frame` extension, you could also use for example `dplyr`, see a quick overview in the related [cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) or the check the related DataCamp course that you can take for free until Jan 2018.
+
+* [From vectors to data frames](https://github.com/daroczig/CEU-R-lab/blob/2018/2.R#L1)
+* [Intro to plots](https://github.com/daroczig/CEU-R-lab/blob/2018/2.R#L50)
+* [Intro to stats](https://github.com/daroczig/CEU-R-lab/blob/2018/2.R#L97)
+* [Intro into business-like data](https://github.com/daroczig/CEU-R-lab/blob/2018/2.R#L114)
+* [Intro into `data.table`](https://github.com/daroczig/CEU-R-lab/blob/2018/2.R#L151)
 
 ## Contact
 
