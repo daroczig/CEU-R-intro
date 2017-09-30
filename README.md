@@ -31,7 +31,9 @@ library(ggplot2)
 ggplot(diamonds, aes(cut)) + geom_bar()
 ```
 
-Optionals steps I highly suggest to do as well:
+Regarding coding style, I highly suggest reading the [related chapter from Hadley Wickham's "Advanced R" book](http://adv-r.had.co.nz/Style.html).
+
+Optional steps I highly suggest to do as well before attending the class if you plan to use `git`:
 
 4. Bookmark, watch or star this repository so that you can easily find it later
 5. Install `git` from https://git-scm.com/
