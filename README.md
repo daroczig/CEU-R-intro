@@ -8,6 +8,7 @@ This is the R script repository of the "[Data Analysis 1a: Foundation of Data ma
 
     * [Week 1: Introduction to R and General Programming](https://github.com/daroczig/CEU-R-lab#week-1-200-min-introduction-to-r-and-general-programming)
     * [Week 2: Introduction to Data Frames](https://github.com/daroczig/CEU-R-lab#week-2-200-min-introduction-to-data-frames)
+    * [Week 3: Data Transformations and Visualization](https://github.com/daroczig/CEU-R-lab#week-3-200-data-transformations-and-data-visualization)
 
 * [Contact](https://github.com/daroczig/CEU-R-lab#contacts)
 
@@ -72,6 +73,10 @@ Also note, that as said in the class, `data.table` is not the only available `da
 * [Intro to stats](https://github.com/daroczig/CEU-R-lab/blob/2018/2.R#L97)
 * [Intro into business-like data](https://github.com/daroczig/CEU-R-lab/blob/2018/2.R#L114)
 * [Intro into `data.table`](https://github.com/daroczig/CEU-R-lab/blob/2018/2.R#L151)
+
+### Week 3 (200 min): Data Transformations and Data Visualization
+
+[R script](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R)
 
 ## Contact
 
