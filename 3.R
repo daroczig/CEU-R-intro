@@ -11,26 +11,8 @@ str(hotels)
 ## #############################################################################
 
 ## TODO compute required budget (EUR) to try all hotels for a night
-hotels[, sum(price_HUF)]
-hotels[, sum(price_HUF) / 310]
-hotels$price_EUR <- hotels$price_HUF / 310
-hotels[, price_EUR := price_HUF / 310]
-hotels[, sum(price_EUR)]
 
 ## TODO categorize hotels into 3 buckets by price
-hotels[, pricecat := cut(price_EUR, 3)]
-hotels[, .N, by = pricecat]
-hotels[, pricecat := cut(price_EUR, 3, dig.lab = 8)]
-hotels[, .N, by = pricecat]
-
-hotels[, pricecat := cut(price_EUR, c(0, 10000, 100000, Inf), dig.lab = 8)]
-hotels[, .N, by = pricecat]
-
-hotels[, pricecat := cut(price_EUR,
-                         c(0, 10000, 100000, Inf),
-                         labels = c('cheap', 'average', 'expensive'))]
-hotels[, .N, by = pricecat]
-## why these numbers? what's cheap and expensive? compared to what?
 
 ## stats approach to categorize hotels by price: using average and std deviation
 avg_price <- hotels[, mean(price_EUR)]
@@ -44,9 +26,6 @@ hotels[, .N, by = pricecat]
 ## also very different by city
 
 ## TODO avg price in EUR per city
-hotels[, mean(price_EUR), by = city]
-## use named expressions to name columns
-hotels[, list(avg_price = mean(price_EUR)), by = city]
 
 ## #############################################################################
 ## summaries
@@ -65,15 +44,10 @@ hotels[, pricecat := cut(price_EUR, c(0,
 hotels[, .N, by = pricecat]
 
 ## TODO compute the number of hotels in the city
-hotels[, .(hotels = .N), by = city]
+
 ## TODO merge this metric to the actual dataset
-hotels[, hotels := .N, by = city]
+
 ## TODO create a new variable on city type: small or big depending on the number of hotels
-hotels[, .N, by = city]
-hotels[, citytype := cut(hotels, 2)]
-hotels[, .N, by = citytype]
-hotels[, citytype := cut(hotels, 2, labels = c('small', 'big'))]
-hotels[, .N, by = citytype]
 
 ## number of cases per multiple variables
 hotels[, .N, by = list(pricecat, citytype)]
@@ -94,29 +68,10 @@ price_per_type
 hotels[, .(price_avg = mean(price_EUR)), by = city]
 
 ## TODO min, avg, median and max price in EUR per city
-hotels[, list(
-    min_price = min(price_EUR),
-    avg_price = mean(price_EUR),
-    med_price = median(price_EUR),
-    max_price = max(price_EUR)
-), by = city]
 
 ## TODO round it up to EUR
-hotels[, list(
-    min_price = round(min(price_EUR)),
-    avg_price = round(mean(price_EUR)),
-    med_price = round(median(price_EUR)),
-    max_price = round(max(price_EUR))
-), by = city]
 
 ## TODO compute the average price, rating, stars per city in a new dataset
-hotels[, .(price_avg = mean(price_EUR),
-           rating_avg = mean(rating),
-           stars_avg = mean(stars)), by = city]
-
-hotels[, .(price_avg = mean(price_EUR),
-           rating_avg = mean(rating, na.rm = TRUE),
-           stars_avg = mean(stars, na.rm = TRUE)), by = city]
 
 ## check the same on rating and stars
 hotels[, lapply(.SD, mean), by = city, .SDcols = c('price_EUR', 'rating', 'stars')]
@@ -187,8 +142,6 @@ p + facet_wrap( ~ citytype)
 p + facet_grid(citytype ~ pricecat)
 
 ## TODO fix order of the labels
-hotels[, pricecat := factor(pricecat, labels = c('below avg', 'avg', 'above avg'))]
-p + facet_grid(citytype ~ pricecat)
 
 ## stacked, clustered bar charts
 p <- ggplot(hotels, aes(x = pricecat, fill = citytype))
@@ -255,6 +208,8 @@ p + theme_custom() + scale_fill_brewer(palette = "Greens")
 ## #############################################################################
 
 ## TODO avg price in EUR per country
+
+## parsing the country out of the city column
 hotels[, city := as.character(city)]
 
 x <- 'Budapest, Hungary'
@@ -271,12 +226,8 @@ hotels[, country := sub('.*, ', '', city)]
 hotels[, sum(price_EUR), by = country]
 
 ## TODO compute the avg price in Hungary rating > 4.5
-hotels[country == 'Hungary' & rating > 4.5, mean(price_EUR)]
 
 ## TODO histogram on the same prices
-hist(hotels[country == 'Hungary' & rating > 4.5, price_EUR])
-hotels[country == 'Hungary' & rating > 4.5, hist(price_EUR)]
-ggplot(hotels[country == 'Hungary' & rating > 4.5], aes(price_EUR)) + geom_histogram()
 
 ## more summaries => percentage of high rated hotels in Hungary
 hotels[country == 'Hungary', sum(rating > 4.5, na.rm = TRUE)]
@@ -309,18 +260,10 @@ gdp <- gdp[, .(country, gdp)]
 hotels <- merge(hotels, gdp, by = 'country')
 
 ## TODO compute the avg price of hotels and the GDP per country
-hotels[, .(gdp = mean(gdp), price = mean(price_EUR)), by = country]
-country_stats <- hotels[, .(gdp = mean(gdp), price = mean(price_EUR)), by = country]
 
 ## TODO visualize association
-ggplot(country_stats, aes(gdp, price)) + geom_point()
-ggplot(country_stats, aes(gdp, price)) + geom_point() + geom_smooth()
-ggplot(country_stats, aes(gdp, price)) + geom_point() + geom_smooth(method = 'lm')
-
-cor(country_stats$gdp, country_stats$price)
 
 ## TODO which are the countries with relatively low GDP but high hotel prices?
-country_stats[price > 200]
 
 ## let's exclude these
 country_stats[price < 200, .(gdp, price)]
@@ -365,13 +308,8 @@ ggplot(hotels, aes(country, price_HUF)) + geom_boxplot() +
     xlab('') + ylab('') + ggtitle('Hotel prices on Dec 31')
 
 ## TODO show the ratings per country on a boxplot
-ggplot(hotels, aes(country, rating)) + geom_boxplot() +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 ## TODO show the average rating per country
-ratings <- hotels[, list(avg_rating = mean(rating, na.rm = TRUE)), by = country]
-ggplot(ratings, aes(country, avg_rating, color)) + geom_bar(stat = 'identity') +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 ## custom ggplot theme
 mytheme <- function() {
@@ -381,15 +319,6 @@ mytheme <- function() {
 ggplot(ratings, aes(country, avg_rating, color)) + geom_bar(stat = 'identity') + mytheme()
 
 ## TODO plot the min, max and avg price per country
-countries <- hotels[, list(
-    min_price = min(price_EUR),
-    avg_price = mean(price_EUR),
-    med_price = median(price_EUR),
-    max_price = max(price_EUR)
-), by = country]
-countries <- melt(countries)
-str(countries)
-ggplot(countries, aes(country, value, color = variable, group = variable)) + geom_line() + mytheme()
 
 ## move and rename legend
 ggplot(countries, aes(country, value, color = variable, group = variable)) + geom_line() + mytheme() +
