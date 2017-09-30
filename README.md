@@ -8,7 +8,7 @@ This is the R script repository of the "[Data Analysis 1a: Foundation of Data ma
 
     * [Week 1: Introduction to R and General Programming](https://github.com/daroczig/CEU-R-lab#week-1-200-min-introduction-to-r-and-general-programming)
     * [Week 2: Introduction to Data Frames](https://github.com/daroczig/CEU-R-lab#week-2-200-min-introduction-to-data-frames)
-    * [Week 3: Data Transformations and Visualization](https://github.com/daroczig/CEU-R-lab#week-3-200-data-transformations-and-data-visualization)
+    * [Week 3: Data Transformations and Visualization](https://github.com/daroczig/CEU-R-lab#week-3-200-min-data-transformations-and-data-visualization)
 
 * [Contact](https://github.com/daroczig/CEU-R-lab#contacts)
 
@@ -76,7 +76,13 @@ Also note, that as said in the class, `data.table` is not the only available `da
 
 ### Week 3 (200 min): Data Transformations and Data Visualization
 
-[R script](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R)
+* [Creating new variables: numeric to factor](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L9)
+* [Summary tables](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L30)
+* [`ggplot2`: Grammar of Graphics in R](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L83)
+* [Creating new variables: parsing text](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L206)
+* [Joining external data](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L237)
+* [Restructure long and wide tables](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L274)
+* [Summary tables for data visualization](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L295)
 
 ## Contact
 
