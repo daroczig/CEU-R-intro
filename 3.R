@@ -321,7 +321,8 @@ ggplot(ratings, aes(country, avg_rating, color)) + geom_bar(stat = 'identity') +
 ## TODO plot the min, max and avg price per country
 
 ## move and rename legend
-ggplot(countries, aes(country, value, color = variable, group = variable)) + geom_line() + mytheme() +
+ggplot(countries, aes(country, value, color = variable, group = variable)) +
+    geom_line() + mytheme() +
     theme(legend.position = 'top') + scale_color_brewer('Metrics', palette = 'Greens')
 
 ## using facets
