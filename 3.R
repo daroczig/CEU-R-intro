@@ -137,7 +137,7 @@ p <- ggplot(hotels, aes(factor(stars), rating)) + geom_boxplot()
 p + facet_wrap( ~ citytype)
 
 ## fix ordering
-hotels[, citytype := factor(citytype, labels = c('small', 'big'))]
+hotels[, citytype := factor(citytype, levels = c('small', 'big'))]
 p + facet_wrap( ~ citytype)
 p + facet_grid(citytype ~ pricecat)
 
