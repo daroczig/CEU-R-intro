@@ -79,12 +79,8 @@ Also note, that as said in the class, `data.table` is not the only available `da
 ### Week 3 (200 min): Data Transformations and Data Visualization
 
 * [Creating new variables: numeric to factor](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L9)
-* [Summary tables](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L30)
-* [`ggplot2`: Grammar of Graphics in R](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L83)
-* [Creating new variables: parsing text](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L206)
-* [Joining external data](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L237)
-* [Restructure long and wide tables](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L274)
-* [Summary tables for data visualization](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L295)
+* [Summary tables](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L50)
+* [`ggplot2`: Grammar of Graphics in R](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L129)
 
 ## Contact
 
