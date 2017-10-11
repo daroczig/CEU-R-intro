@@ -9,6 +9,7 @@ This is the R script repository of the "[Data Analysis 1a: Foundation of Data ma
     * [Week 1: Introduction to R and General Programming](https://github.com/daroczig/CEU-R-lab#week-1-200-min-introduction-to-r-and-general-programming)
     * [Week 2: Introduction to Data Frames](https://github.com/daroczig/CEU-R-lab#week-2-200-min-introduction-to-data-frames)
     * [Week 3: Data Transformations and Visualization](https://github.com/daroczig/CEU-R-lab#week-3-200-min-data-transformations-and-data-visualization)
+    * [Week 4: Text Parsing, Regular Expressions, Joins](https://github.com/daroczig/CEU-R-lab#week-4-200-min-text-parsing-regular-expressions-joins)
 
 * [Contact](https://github.com/daroczig/CEU-R-lab#contacts)
 
@@ -81,6 +82,12 @@ Also note, that as said in the class, `data.table` is not the only available `da
 * [Creating new variables: numeric to factor](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L9)
 * [Summary tables](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L50)
 * [`ggplot2`: Grammar of Graphics in R](https://github.com/daroczig/CEU-R-lab/blob/2018/3.R#L129)
+
+### Week 4 (200 min): Text Parsing, Regular Expressions, Joins
+
+* [Parsing text](https://github.com/daroczig/CEU-R-lab/blob/2018/4.R#L4)
+* [Joins](https://github.com/daroczig/CEU-R-lab/blob/2018/4.R#L64)
+* [Geocoding](https://github.com/daroczig/CEU-R-lab/blob/2018/4.R#L117)
 
 ## Contact
 
