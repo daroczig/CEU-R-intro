@@ -29,16 +29,37 @@ setnames(hotels, 'city', 'citycountry')
 hotels[, city := strsplit(citycountry, ', ')[[1]][1], by = citycountry]
 
 ## TODO count the number of cities with hotels in Hungary
+hotels[, .N, by = country]
+hotels[country == 'Hungary', .N]
+hotels[country == 'Hungary', length(unique(city))]
 ## TODO count the number of cities with hotels in Germany
+hotels[country == 'Germany', length(unique(city))]
 ## TODO count the average number of hotels per city
+hotels[, .N, by = city][, mean(N)]
 ## TODO count the average number of hotels per city per country
+hotels_per_city <- hotels[, .N, by = .(country, city)]
+hotels_per_city[, mean(N), by = country]
 ## TODO compute the percentage of national hotels per city
+hotels_per_city[, P := N / sum(N) * 100, by = country]
+hotels_per_city
+hotels_per_city[order(country, city)]
 
 ## TODO compute the avg price in Hungary rating > 4.5
+hotels[country == 'Hungary' & rating > 4.5, mean(price_HUF, na.rm = TRUE)]
 
 ## TODO histogram on the same prices
+library(ggplot2)
+library(scales)
+ggplot(hotels[country == 'Hungary' & rating > 4.5], aes(price_HUF)) +
+    geom_histogram(binwidth = 10000) +
+    scale_x_continuous(labels = dollar_format(suffix = 'Ft', prefix = '')) +
+    xlab('') + ylab('') +
+    ggtitle('Number of hotels', subtitle = 'Budapest, Hungary')
 
 ## TODO more summaries => percentage of high rated hotels in Hungary
+hotels[country == 'Hungary', sum(rating > 4.5, na.rm = TRUE)]
+hotels[country == 'Hungary', sum(rating > 4.5, na.rm = TRUE) / .N]
+hotels[country == 'Hungary', sum(rating > 4.5, na.rm = TRUE) / .N * 100]
 
 ## #############################################################################
 ## joining external data
@@ -67,10 +88,25 @@ gdp
 hotels <- merge(hotels, gdp, by = 'country')
 
 ## TODO compute the avg price of hotels and the GDP per country
+hotels[, .(price = mean(price_HUF), gdp = gdp[1]), by = country]
+country_stats <- hotels[, .(price = mean(price_HUF), gdp = gdp[1]), by = country]
 
 ## TODO visualize association
+ggplot(country_stats,
+       aes(gdp, price)) + geom_point()
+
+ggplot(country_stats,
+       aes(gdp, price, label = country)) + geom_text()
+ggplot(country_stats,
+       aes(gdp, price, label = country)) + geom_text() + geom_smooth()
+ggplot(country_stats,
+       aes(gdp, price, label = country)) + geom_text() + geom_smooth(method = 'lm')
+
+cor(country_stats[, .(gdp, price)])
 
 ## TODO which are the countries with relatively low GDP but high hotel prices?
+country_stats[price > 70000]
+country_stats[price > 70000 & gdp < 30000]
 
 ## let's exclude these
 country_stats[price < 70000, .(gdp, price)]
