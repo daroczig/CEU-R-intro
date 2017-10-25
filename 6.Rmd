@@ -1,0 +1,92 @@
+---
+title: "Learning RMarkdown"
+author: "Gergely"
+date: "February 4, 2017"
+output: html_document
+---
+
+
+Markdown is a simple markup language to format plain text files, eg using *italic* or **bold** font, or sometimes even ***both*** or ~~none~~ at all. We can also refer to inline `code` examples, or use syntax highlighting for larger code chunks:
+
+```r
+n <- 100
+x <- rnorm(n, 10, 1)
+summary(x)
+hist(x)
+```
+
+But we can also evaluate `r "R"` code inline or in separate code chunks as well:
+
+```{r}
+n <- 100
+x <- rnorm(n, 10, 1)
+summary(x)
+hist(x)
+## TODO show error
+```
+
+
+We can generate markdown tables to be rendered nicely in PDF/HTML/docx etc documents by `kable` from the `knitr` package, or `pander` for the more complex tables:
+
+```{r error=TRUE}
+knitr::kable(head(iris))
+
+library(pander)
+pander(head(iris))
+
+knitr::kable(table(iris$Species))
+pander(table(iris$Species))
+```
+
+
+And this latter `pander` package has some nifty features:
+
+```{r}
+fit <- lm(mpg ~ wt + hp, mtcars)
+fit
+pander(fit)
+
+emphasize.strong.cells(which(head(mtcars) < 5, arr.ind = TRUE))
+pander(head(mtcars))
+```
+
+We can suppress the R commands easily with one of the many chunk options:
+
+```{r, echo = FALSE}
+pander(table(iris$Species), justify = 'right')
+```
+
+Or we can use global options, eg:
+
+```{r global_options, include = FALSE}
+library(knitr)
+opts_chunk$set(
+    fig.width  = 8,
+    fig.height = 8,
+    dpi        = 300,
+    echo       = FALSE,
+    warning    = FALSE,
+    message    = FALSE)
+```
+
+Dynamic stuff:
+
+```{r}
+library(shiny)
+inputPanel(
+    sliderInput('n', label = 'N', min = 1, max = 1000, value = 100, step = 10),
+    sliderInput('seed', label = 'Seed', min = 1, max = 42, value = 42, step = 1)) ## LATER
+
+renderPlot({
+  set.seed(as.numeric(input$seed)) ## LATER
+  hist(runif(as.numeric(input$n)))
+})
+```
+
+So now you have everything in hand to analyze all `r nrow(mtcars)` cars in the `mtcars` dataset with the following names:
+
+```{r}
+pander(as.list(names(mtcars)))
+```
+
+Don't forget to check out the PDF and Word document outputs as well!
