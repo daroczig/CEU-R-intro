@@ -10,6 +10,8 @@ This is the R script repository of the "[Data Analysis 1a: Foundation of Data ma
     * [Week 2: Introduction to Data Frames](https://github.com/daroczig/CEU-R-lab#week-2-200-min-introduction-to-data-frames)
     * [Week 3: Data Transformations and Visualization](https://github.com/daroczig/CEU-R-lab#week-3-200-min-data-transformations-and-data-visualization)
     * [Week 4: Text Parsing, Regular Expressions, Joins](https://github.com/daroczig/CEU-R-lab#week-4-200-min-text-parsing-regular-expressions-joins)
+    * Week 5: Case Study on Bisnode Dataset
+    * [Week 6: Introduction to R Markdown and Shiny](https://github.com/daroczig/CEU-R-lab#week-6-100-min-introduction-to-r-markdown-and-shiny)
 
 * [Contact](https://github.com/daroczig/CEU-R-lab#contacts)
 
@@ -88,6 +90,15 @@ Also note, that as said in the class, `data.table` is not the only available `da
 * [Parsing text](https://github.com/daroczig/CEU-R-lab/blob/2018/4.R#L4)
 * [Joins](https://github.com/daroczig/CEU-R-lab/blob/2018/4.R#L64)
 * [Geocoding](https://github.com/daroczig/CEU-R-lab/blob/2018/4.R#L117)
+
+### Week 5 (200 min): Case Study on Bisnode Dataset
+
+Please find the data and R scripts uploaded to Moodle.
+
+### Week 6 (100 min): Introduction to R Markdown and Shiny
+
+* [Example R Markdown document](https://github.com/daroczig/CEU-R-lab/blob/2018/6.Rmd)
+* [Example Shiny app](https://github.com/daroczig/CEU-R-lab/blob/2018/6.R)
 
 ## Contact
 
