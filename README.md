@@ -42,6 +42,66 @@ Optional steps I highly suggest to do as well before attending the class if you 
 
 Find more resources in Jenny Bryan's "[Happy Git and GitHub for the useR](http://happygitwithr.com/)" tutorial if in doubt or [contact me](#contact).
 
+## Class Schedule
+
+### Week 1 (100 min): Introduction to R
+
+* General overview of the R ecosystem
+* Basic math operations
+* Numbers, strings, vectors
+* Functions
+* Basic plots
+
+Suggested reading: [Hadley Wickham: Style guide. In *Advanced R*.](http://adv-r.had.co.nz/Style.html)
+
+Homework: DataCamp
+
+### Week 2 (100 min): Introduction to Data Frames and column types
+
+* From vectors to data frames
+* Loading data from text and Excel files
+* Variable types: numeric, character, factor, Date etc.
+* Conversion between variable types
+* Filtering and sorting data (vectors and data frames)
+
+Homework: DataCamp
+
+### Week 3 (100 min): Data Transformations
+
+* Intro into `data.table`
+* Creating new variables
+* Summarizing data, aggregates
+* Finding missing values and duplicates
+* Basic text parsing
+* Combining datasets
+
+Homework: DataCamp
+
+### Week 4 (100 min): Exploratory Data Analysis
+
+* The five-number summary
+* Data visualization with `ggplot2`
+
+Homework: DataCamp
+
+### Week 5 (100 min): Sampling and Simulations
+
+* Simulation of random walk in 1D
+* Introduction to writing loops and the `apply` function family
+* Estimating the standard error
+
+Homework: DataCamp
+
+### Week 6 (100 min): Hypothesis Testing
+
+* z-score
+* t-test
+* Confidence intervals
+* Deep dive in the R object structures
+* Computing required sample size for A/B testing
+
+Homework
+
 ## Contact
 
 File a [GitHub ticket](https://github.com/daroczig/CEU-R-lab/issues).
