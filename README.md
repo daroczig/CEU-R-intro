@@ -46,15 +46,17 @@ Find more resources in Jenny Bryan's "[Happy Git and GitHub for the useR](http:/
 
 ### Week 1 (100 min): Introduction to R
 
-* General overview of the R ecosystem
-* Basic math operations
-* Numbers, strings, vectors
-* Functions
-* Basic plots
+* General overview of the R ecosystem: [slides](http://bit.ly/CEU-R-1)
+* Basic math operations: [1.R](1.R)
+* Numbers, strings, vectors: [1.R](1.R)
+* Functions: [1.R](1.R)
+* Basic plots: [1.R](1.R)
+* Basic stats: [1.R](1.R)
+* Intro to data frames: [1.R](1.R)
 
 Suggested reading: [Hadley Wickham: Style guide. In *Advanced R*.](http://adv-r.had.co.nz/Style.html)
 
-Homework: DataCamp
+Homework: [DataCamp](https://campus.datacamp.com/courses/ceu-da1-2018-seminar-homeworks/week-1-1)
 
 ### Week 2 (100 min): Introduction to Data Frames and column types
 
