@@ -4,6 +4,7 @@ This is the R script repository of the "[Data Analysis 1a: Exploration](https://
 
 * [Syllabus](https://github.com/daroczig/CEU-R-lab#syllabus)
 * [Technical Prerequisites](https://github.com/daroczig/CEU-R-lab#technical-prerequisites)
+* [Class Schedule](https://github.com/daroczig/CEU-R-lab#class-schedule)
 * [Contact](https://github.com/daroczig/CEU-R-lab#contacts)
 
 ## Syllabus
@@ -47,12 +48,12 @@ Find more resources in Jenny Bryan's "[Happy Git and GitHub for the useR](http:/
 ### Week 1 (100 min): Introduction to R
 
 * General overview of the R ecosystem: [slides](http://bit.ly/CEU-R-1)
-* Basic math operations: [1.R](1.R)
-* Numbers, strings, vectors: [1.R](1.R)
-* Functions: [1.R](1.R)
-* Basic plots: [1.R](1.R)
-* Basic stats: [1.R](1.R)
-* Intro to data frames: [1.R](1.R)
+* Basic math operations: [1.R](1.RR#L1)
+* Numbers, strings, vectors: [1.R](1.R#L12)
+* Functions: [1.R](1.R#L43)
+* Basic plots: [1.R](1.R#L62)
+* Basic stats: [1.R](1.R#L84)
+* Intro to data frames: [1.R](1.R#L102)
 
 Suggested reading: [Hadley Wickham: Style guide. In *Advanced R*.](http://adv-r.had.co.nz/Style.html)
 
