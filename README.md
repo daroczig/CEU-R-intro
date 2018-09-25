@@ -57,17 +57,15 @@ Find more resources in Jenny Bryan's "[Happy Git and GitHub for the useR](http:/
 
 Suggested reading: [Hadley Wickham: Style guide. In *Advanced R*.](http://adv-r.had.co.nz/Style.html)
 
-Homework: [DataCamp](https://campus.datacamp.com/courses/ceu-da1-2018-seminar-homeworks/week-1-1)
+Homework: [DataCamp](https://campus.datacamp.com/courses/ceu-da1-2018-seminar-homeworks/42448)
 
 ### Week 2 (100 min): Introduction to Data Frames and column types
 
-* From vectors to data frames
-* Loading data from text and Excel files
-* Variable types: numeric, character, factor, Date etc.
-* Conversion between variable types
-* Filtering and sorting data (vectors and data frames)
+* Recap on data frames: [2.R](2.R#L1)
+* Loading data from text and Excel files: [2.R](2.R#L73)
+* Variable types, conversion between variable types: [2.R](2.R#L96)
 
-Homework: DataCamp
+Homework: [DataCamp]()
 
 ### Week 3 (100 min): Data Transformations
 
