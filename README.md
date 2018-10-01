@@ -62,7 +62,7 @@ Find more resources in Jenny Bryan's "[Happy Git and GitHub for the useR](http:/
 
 Suggested reading: [Hadley Wickham: Style guide. In *Advanced R*.](http://adv-r.had.co.nz/Style.html)
 
-Homework: [DataCamp](https://campus.datacamp.com/courses/ceu-da1-2018-seminar-homeworks/42448)
+Homework: [DataCamp](https://campus.datacamp.com/courses/ceu-da1-2018-seminar-homeworks/week-1-1)
 
 ### Week 2 (100 min): Introduction to Data Frames and column types
 
@@ -70,7 +70,7 @@ Homework: [DataCamp](https://campus.datacamp.com/courses/ceu-da1-2018-seminar-ho
 * Loading data from text and Excel files: [2.R](2.R#L73)
 * Variable types, conversion between variable types: [2.R](2.R#L96)
 
-Homework: [DataCamp]()
+Homework: [DataCamp](https://campus.datacamp.com/courses/ceu-da1-2018-seminar-homeworks/42448)
 
 ### Week 3 (100 min): Introduction to Data Transformations
 
@@ -81,7 +81,7 @@ Homework: [DataCamp]()
 * Summarizing data, aggregates: [3.R](3.R#L92)
 * Combining datasets: [3.R](3.R#L116)
 
-Homework: DataCamp
+Homework: [DataCamp](https://campus.datacamp.com/courses/data-table-data-manipulation-r-tutorial/chapter-one-datatable-novice)
 
 ### Week 4 (100 min): Exploratory Data Analysis
 
