@@ -67,19 +67,20 @@ Homework: [DataCamp](https://campus.datacamp.com/courses/ceu-da1-2018-seminar-ho
 
 Homework: [DataCamp]()
 
-### Week 3 (100 min): Data Transformations
+### Week 3 (100 min): Introduction to Data Transformations
 
-* Intro into `data.table`
-* Creating new variables
-* Summarizing data, aggregates
-* Finding missing values and duplicates
-* Basic text parsing
-* Combining datasets
+* Recap on data frames: [3.R](3.R#L1)
+* Creating new variables: [3.R](3.R#L45)
+* Finding missing values [3.R](3.R#25) and duplicates [3.R](3.R#L50)
+* Intro into `data.table`: [3.R](3.R#L58)
+* Summarizing data, aggregates: [3.R](3.R#L92)
+* Combining datasets: [3.R](3.R#L116)
 
 Homework: DataCamp
 
 ### Week 4 (100 min): Exploratory Data Analysis
 
+* Basic text parsing
 * The five-number summary
 * Data visualization with `ggplot2`
 
