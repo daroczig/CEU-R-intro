@@ -5,6 +5,11 @@ This is the R script repository of the "[Data Analysis 1a: Exploration](https://
 * [Syllabus](https://github.com/daroczig/CEU-R-lab#syllabus)
 * [Technical Prerequisites](https://github.com/daroczig/CEU-R-lab#technical-prerequisites)
 * [Class Schedule](https://github.com/daroczig/CEU-R-lab#class-schedule)
+
+    * [Week 1](https://github.com/daroczig/CEU-R-lab#week-1-100-min-introduction-to-r)
+    * [Week 2](https://github.com/daroczig/CEU-R-lab#week-2-100-min-introduction-to-data-frames-and-column-types)
+    * [Week 3](https://github.com/daroczig/CEU-R-lab#week-3-100-min-introduction-to-data-transformations)
+
 * [Contact](https://github.com/daroczig/CEU-R-lab#contacts)
 
 ## Syllabus
