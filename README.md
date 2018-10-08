@@ -9,6 +9,7 @@ This is the R script repository of the "[Data Analysis 1a: Exploration](https://
     * [Week 1](https://github.com/daroczig/CEU-R-lab#week-1-100-min-introduction-to-r)
     * [Week 2](https://github.com/daroczig/CEU-R-lab#week-2-100-min-introduction-to-data-frames-and-column-types)
     * [Week 3](https://github.com/daroczig/CEU-R-lab#week-3-100-min-introduction-to-data-transformations)
+    * [Week 4](https://github.com/daroczig/CEU-R-lab#week-4-100-more-data-transformations)
 
 * [Contact](https://github.com/daroczig/CEU-R-lab#contacts)
 
@@ -83,7 +84,17 @@ Homework: [DataCamp](https://campus.datacamp.com/courses/ceu-da1-2018-seminar-ho
 
 Homework: [DataCamp](https://campus.datacamp.com/courses/data-table-data-manipulation-r-tutorial/chapter-one-datatable-novice)
 
-### Week 4 (100 min): Exploratory Data Analysis
+### Week 4 (100 min): More Data Transformations
+
+* Recap on `data.table` summaries: [4.R](4.R#L1)
+* Recap on merging datasets: [4.R](4.R#L37)
+* Creating new variables - numeric to factor: [4.R](4.R#L94)
+* Creating new variables - numeric to numeric: [4.R](4.R#L165)
+* Demo: multiple summaries: [4.R](4.R#L203)
+
+Homework: [DataCamp](https://campus.datacamp.com/courses/data-table-data-manipulation-r-tutorial/chapter-two-datatable-yeoman)
+
+### Week 5 (100 min): Exploratory Data Analysis
 
 * Basic text parsing
 * The five-number summary
@@ -91,15 +102,11 @@ Homework: [DataCamp](https://campus.datacamp.com/courses/data-table-data-manipul
 
 Homework: DataCamp
 
-### Week 5 (100 min): Sampling and Simulations
+### Week 6 (100 min): Sampling, Simulations and Hypothesis Testing
 
 * Simulation of random walk in 1D
 * Introduction to writing loops and the `apply` function family
 * Estimating the standard error
-
-Homework: DataCamp
-
-### Week 6 (100 min): Hypothesis Testing
 
 * z-score
 * t-test
