@@ -114,7 +114,7 @@ Suggested reading:
 * [Hadley Wickham: The Layered Grammar of Graphics](http://vita.had.co.nz/papers/layered-grammar.pdf)
 * [Winston Chang: R Graphics Cookbook](http://www.cookbook-r.com/Graphs)
 
-Homework: DataCamp
+Homework: [DataCamp](https://campus.datacamp.com/courses/ceu-da1-2018-seminar-homeworks/44547)
 
 Ideas to practice using the `hotels` dataset:
 
