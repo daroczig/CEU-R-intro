@@ -97,15 +97,15 @@ Homework: [DataCamp](https://campus.datacamp.com/courses/data-table-data-manipul
 
 ### Week 5 (100 min): Introduction to Data Visualization
 
-* Recap on `data.table` summaries and merging datasets: [5.R#L1]
-* Introduction to data visualization with `ggplot2`: [5.R#L38]
-* Scales and coordinate transformations: [5.R#58]
-* Plotting numeric variables: [5.R#L75]
-* Recap on `factor`s: [5.R#L90]
-* Facets: [5.R#L96]
-* Stacked and clustered bar charts: [5.R#L107]
-* Histograms and density plots: [5.R#L115]
-* Popular and custom themes: [5.R#L127]
+* Recap on `data.table` summaries and merging datasets: [5.R](5.R#L1)
+* Introduction to data visualization with `ggplot2`: [5.R](5.R#L38)
+* Scales and coordinate transformations: [5.R](5.R#58)
+* Plotting numeric variables: [5.R](5.R#L75)
+* Recap on `factor`s: [5.R](5.R#L90)
+* Facets: [5.R](5.R#L96)
+* Stacked and clustered bar charts: [5.R](5.R#L107)
+* Histograms and density plots: [5.R](5.R#L115)
+* Popular and custom themes: [5.R](5.R#L127)
 
 Suggested reading: 
 
