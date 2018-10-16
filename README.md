@@ -10,6 +10,7 @@ This is the R script repository of the "[Data Analysis 1a: Exploration](https://
     * [Week 2](https://github.com/daroczig/CEU-R-lab#week-2-100-min-introduction-to-data-frames-and-column-types)
     * [Week 3](https://github.com/daroczig/CEU-R-lab#week-3-100-min-introduction-to-data-transformations)
     * [Week 4](https://github.com/daroczig/CEU-R-lab#week-4-100-min-more-data-transformations)
+    * [Week 5](https://github.com/daroczig/CEU-R-lab#week-5-100-min-introduction-to-data-visualization)
 
 * [Contact](https://github.com/daroczig/CEU-R-lab#contacts)
 
@@ -94,13 +95,38 @@ Homework: [DataCamp](https://campus.datacamp.com/courses/data-table-data-manipul
 
 Homework: [DataCamp](https://campus.datacamp.com/courses/data-table-data-manipulation-r-tutorial/chapter-two-datatable-yeoman)
 
-### Week 5 (100 min): Exploratory Data Analysis
+### Week 5 (100 min): Introduction to Data Visualization
 
-* Basic text parsing
-* The five-number summary
-* Data visualization with `ggplot2`
+* Recap on `data.table` summaries and merging datasets: [5.R#L1]
+* Introduction to data visualization with `ggplot2`: [5.R#L38]
+* Scales and coordinate transformations: [5.R#58]
+* Plotting numeric variables: [5.R#L75]
+* Recap on `factor`s: [5.R#L90]
+* Facets: [5.R#L96]
+* Stacked and clustered bar charts: [5.R#L107]
+* Histograms and density plots: [5.R#L115]
+* Popular and custom themes: [5.R#L127]
+
+Suggested reading: 
+
+* [Saghir Bashir and Dirk Eddelbuettel: Getting Started in R: Tinyverse Edition](https://eddelbuettel.github.io/gsir-te/Getting-Started-in-R.pdf)
+* [Garrett Grolemund and Hadley Wickham: Data Visualization. In. R for Data Science](http://r4ds.had.co.nz/data-visualisation.html)
+* [Hadley Wickham: The Layered Grammar of Graphics](http://vita.had.co.nz/papers/layered-grammar.pdf)
+* [Winston Chang: R Graphics Cookbook](http://www.cookbook-r.com/Graphs)
 
 Homework: DataCamp
+
+Ideas to practice using the `hotels` dataset:
+
+* plot a barplot on the number of hotels per popularity
+* plot a barplot on the number of hotels per popularity by feeding a `data.table` summary to `ggplot2`
+* plot a histogram on the prices in EUR
+* plot a histogram on the prices in EUR with a bindwidth of 100 EUR
+* plot a histogram on the prices in EUR split by popularity
+* plot a boxplot on the prices below 1000 EUR split by city type
+* plot a boxplot on the prices in EUR split by popularity
+* plot a scatterplot on the prices in EUR and the distance from city center
+* add a linear model to the previous plot
 
 ### Week 6 (100 min): Sampling, Simulations and Hypothesis Testing
 
