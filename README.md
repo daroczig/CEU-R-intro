@@ -131,15 +131,12 @@ Ideas to practice using the `hotels` dataset:
 
 ### Week 6 (100 min): Sampling, Simulations and Hypothesis Testing
 
-* Simulation of random walk in 1D
-* Introduction to writing loops and the `apply` function family
-* Estimating the standard error
-
-* z-score
-* t-test
-* Confidence intervals
-* Deep dive in the R object structures
-* Computing required sample size for A/B testing
+* Introduction to random sampling: [6.R](6.R#L23)
+* Introduction to writing loops: [6.R](6.R#L27)
+* Estimating the standard error: [6.R](6.R#L43)
+* Confidence intervals: [6.R](6.R#L47)
+* t-test: [6.R](6.R#L95)
+* Required sample size calculations: [6.R](6.R#L115)
 
 Suggested reading / materials:
 
