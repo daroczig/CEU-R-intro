@@ -11,6 +11,7 @@ This is the R script repository of the "[Data Analysis 1a: Exploration](https://
     * [Week 3](https://github.com/daroczig/CEU-R-lab#week-3-100-min-introduction-to-data-transformations)
     * [Week 4](https://github.com/daroczig/CEU-R-lab#week-4-100-min-more-data-transformations)
     * [Week 5](https://github.com/daroczig/CEU-R-lab#week-5-100-min-introduction-to-data-visualization)
+    * [Week 6](https://github.com/daroczig/CEU-R-lab#week-6-100-min-sampling-simulations-and-hypothesis-testing)
 
 * [Contact](https://github.com/daroczig/CEU-R-lab#contacts)
 
@@ -140,7 +141,26 @@ Ideas to practice using the `hotels` dataset:
 * Deep dive in the R object structures
 * Computing required sample size for A/B testing
 
-Homework
+Suggested reading / materials:
+
+* [Visualizing uncertainty with `ggpplot2` - teaching examples](https://github.com/clauswilke/ungeviz)
+* [Data generator Shiny app for statistical tests](http://andyluttrell.com/datagen.html)
+* [A/B Testing in R class on Datacamp](https://www.datacamp.com/courses/ab-testing-in-r)
+
+Homework: TBD
+
+Ideas to practice using the `hotels` dataset:
+
+```r
+hotels <- readRDS(url('http://bit.ly/CEU-R-hotels-2018-merged'))
+```
+
+* create a new `pricecat` variable based on `avg_price_per_night`: "cheap" below 100 EUR, "expensive" above
+* check if expensive hotels are rated above cheap
+* plot the difference of ratings between cheap and expensive hotels including the results of a `t.test`
+* create a new `popularity` variable with 3 categories from the number of bookings (0-3, 4-7, 8-10)
+* check if popular hotels are higher rated than less popular hotels
+* plot the difference
 
 ## Contact
 
