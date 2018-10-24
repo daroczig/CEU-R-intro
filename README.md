@@ -144,7 +144,7 @@ Suggested reading / materials:
 * [Data generator Shiny app for statistical tests](http://andyluttrell.com/datagen.html)
 * [A/B Testing in R class on Datacamp](https://www.datacamp.com/courses/ab-testing-in-r)
 
-Homework: TBD
+Homework: [DataCamp](https://campus.datacamp.com/courses/ceu-da1-2018-seminar-homeworks/45447)
 
 Ideas to practice using the `hotels` dataset:
 
