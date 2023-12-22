@@ -36,11 +36,14 @@ Please bring your own laptop* and make sure to install the below items **before*
 3. Enter the following commands in the R console (bottom left panel of RStudio) and make sure you see a plot in the bottom right panel and no errors in the R console:
 
 ```r
-install.packages(c('ggplot2', 'gganimate', 'transformr', 'gifski'))
+install.packages('ggplot2')
 library(ggplot2)
-library(gganimate)
-ggplot(diamonds, aes(cut)) + geom_bar() +
-    transition_states(color, state_length = 0.1)
+ggplot(diamonds) +
+  aes(x = price, fill = clarity) +
+  geom_density(alpha = 0.5) + facet_grid(color ~ cut) +
+  xlab('') + ylab('') +
+  theme_bw() + theme('legend.position' = 'top') +
+  guides(fill = guide_legend(nrow = 1))
 ```
 
 Optional steps I highly suggest to do as well before attending the class if you plan to use `git`:
