@@ -66,6 +66,63 @@ Find more resources in Jenny Bryan's "[Happy Git and GitHub for the useR](http:/
 
 (*) If you may not be able to use your own laptop, there's a shared RStudio Server set up in AWS - including all the required R packages already installed for you. Look up the class Slack channel for how to access.
 
+For the curious mind, this is how the shared RStudio Server was set up in AWS: <details><summary>Click to expand ...</summary>
+
+💪 Installing software:
+
+```
+# most recent R builds
+wget -q -O- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+echo "deb [arch=amd64] https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/" | sudo tee -a /etc/apt/sources.list.d/cran_r.list
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 67C2D66C4B1D4339 51716619E084DAB9
+sudo apt update && sudo apt upgrade
+sudo apt install r-base
+# apt builds of all CRAN packages
+wget -q -O- https://eddelbuettel.github.io/r2u/assets/dirk_eddelbuettel_key.asc | sudo tee -a /etc/apt/trusted.gpg.d/cranapt_key.asc
+echo "deb [arch=amd64] https://r2u.stat.illinois.edu/ubuntu jammy main" | sudo tee -a /etc/apt/sources.list.d/cranapt.list
+sudo apt update
+# install some R packages
+sudo apt install -y r-cran-ggplot2 r-cran-ggally r-cran-readxl
+sudo apt install -y r-cran-data.table
+sudo apt install -y r-cran-glue r-cran-logger
+# install RStudio IDE
+sudo apt install -y r-base gdebi-core
+wget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2023.12.0-369-amd64.deb
+sudo gdebi rstudio-server-*.deb
+# never do this in prod
+echo "www-port=80" | sudo tee -a /etc/rstudio/rserver.conf
+sudo rstudio-server restart
+```
+
+💪 Creating users
+
+```r
+secret <- 'something super secret' # e.g. digest::digest(1, algo="sha1")
+users <- c('list', 'of', 'users')
+
+library(logger)
+library(glue)
+for (user in users) {
+
+  ## remove invalid character
+  user <- sub('@.*', '', user)
+  user <- sub('-', '_', user)
+  user <- sub('.', '_', user, fixed = TRUE)
+  user <- tolower(user)
+
+  log_info('Creating {user}')
+  system(glue("sudo adduser --disabled-password --quiet --gecos '' {user}"))
+
+  log_info('Setting password for {user}')
+  system(glue("echo '{user}:{secret}' | sudo chpasswd")) # note the single quotes + placement of sudo
+
+  log_info('Adding {user} to sudo group')
+  system(glue('sudo adduser {user} sudo'))
+
+}
+```
+</details>
+
 ## Contact
 
 File a [GitHub ticket](https://github.com/daroczig/CEU-R-lab/issues).
