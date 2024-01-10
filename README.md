@@ -138,6 +138,8 @@ for (user in users) {
 * Introduction to data visualization with `ggplot2`: [1.R](1.R#L244)
 * Introduction to `data.table`: [1.R](1.R#L323)
 
+Suggested reading: [Hadley Wickham: Style guide. In *Advanced R*.](http://adv-r.had.co.nz/Style.html
+
 ## Homework
 
 Load the bookings dataset:
@@ -164,6 +166,7 @@ hotels <- readRDS(url('http://bit.ly/CEU-R-hotels-2018-merged'))
 * Create a boxplot on ratings per stars!
 * Create histograms on the nightly prices for each star category! Check out the arguments and disable forcing the same Y axis range for the subplots.
 
+Compare your results with [the example solutions](https://raw.githack.com/daroczig/CEU-R-intro/2023-winter/homework.html).
 
 ## Contact
 
