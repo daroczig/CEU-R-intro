@@ -186,3 +186,241 @@ lm(df)
 df$bmi <- df$weight / (df$height/100)^2
 str(df)
 df
+
+## #############################################################################
+## data frame exercises
+## #############################################################################
+
+df <- read.csv('http://bit.ly/CEU-R-heights')
+str(df)
+plot(df)
+
+## TODO check the number of observation
+length(df)
+str(df)
+nrow(df)
+?nrow
+dim(df)
+
+## dim returns same as
+c(nrow(df), ncol(df))
+
+## TODO check the height of the 2nd respondent
+df$heightIn[2]
+df[2, 4]
+df[2, 'heightIn']
+df[2, "heightIn"]
+
+## TODO compute height in cm
+df$heightIn * 2.54
+str(df)
+df$height <- df$heightIn * 2.54
+str(df)
+
+## drop a column
+df$heightIn <- NULL
+str(df)
+
+## TODO compute weight in kg
+df$weight <- df$weightLb * .45
+str(df)
+
+## TODO compute BMI
+df$bmi <- df$weight / (df$height/100)^2
+
+## removing 2 columns
+df$weightLb <- df$ageMonth <- NULL
+str(df)
+
+## quick EDA
+plot(df) ## data.frame
+
+## interactivity
+install.packages('pairsD3')
+library(pairsD3)
+pairsD3(df)
+
+## why ggplot?
+install.packages('GGally')
+library(GGally)
+ggpairs(df)
+
+## #############################################################################
+## intro to ggplot2
+## #############################################################################
+
+## the R implementation of the Grammar of Graphics
+library(ggplot2)
+
+## barplot with ggplot: you specify a dataset, then define an aesthetic and geom
+ggplot(df, aes(x = height)) + geom_histogram()
+## and optionally some further layers (theme)
+ggplot(df, aes(x = height)) + geom_histogram() + theme_bw()
+ggplot(df, aes(x = height)) + geom_histogram(colour = "darkgreen", fill = "white") + theme_bw()
+
+## we can store the resulting plot as an R object for future reuse
+p <- ggplot(df, aes(x = height)) + geom_histogram()
+p
+p + theme_bw()
+
+## it's better to split long lines for easier reading
+p <- ggplot(df, aes(x = height)) +
+     geom_histogram() +
+     theme_bw()
+p
+
+## coord transformations
+library(scales)
+p + scale_y_log10()
+p + scale_y_sqrt()
+p + scale_y_reverse()
+p + coord_flip()
+
+## other categorical variable: country
+ggplot(df, aes(x = sex)) + geom_histogram() # ERROR
+ggplot(df, aes(x = sex)) + geom_bar()
+ggplot(df, aes(x = sex)) + geom_bar() + theme(axis.text.x = element_text(angle = 90))
+## QQ ordering? later...
+?theme
+
+## other geoms
+ggplot(df, aes(height, weight)) + geom_point()
+ggplot(df, aes(height, weight)) + geom_point() + geom_smooth()
+ggplot(df, aes(height, weight)) + geom_point() + geom_smooth(method = 'lm', color = 'red', se = FALSE)
+
+## mix continious with a discrete variable
+ggplot(df, aes(height)) + geom_boxplot()
+ggplot(df, aes(sex, height)) + geom_boxplot()
+ggplot(df, aes(sex, height)) + geom_violin()
+ggplot(df, aes(sex, height)) + geom_boxplot() + geom_violin(alpha = .25)
+ggplot(df, aes(sex, height)) + geom_boxplot() + geom_violin(alpha = .25) +  geom_jitter()
+
+## facet => create separate plots per group
+p <- ggplot(df, aes(x = height)) + geom_histogram()
+p + facet_wrap( ~ sex)
+
+## density plot
+ggplot(df, aes(x = height)) + geom_density()
+ggplot(df, aes(x = height, fill = sex)) + geom_density()
+ggplot(df, aes(x = height, fill = sex)) + geom_density(alpha = 0.2) + theme_bw()
+ggplot(df, aes(x = height, fill = sex)) + geom_density(alpha = 0.2) + theme_bw() +
+    ggtitle("Height of boys and girls") +
+    xlab("Height (cm)") + ylab("") +
+    theme(legend.position = "top")
+
+?theme
+
+## plot number of girls and boys below and above 160 cm!
+## maybe a stacked barchart?
+
+ggplot(df, aes(x = sex, y = ...)) + geom_bar()
+## need to transform the data ...
+df$height_cat <- df$height < 160
+table(df$height_cat)
+df$height_cat <- cut(df$height, breaks = c(0, 160, Inf))
+table(df$height_cat)
+
+ggplot(df, aes(x = sex, fill = height_cat)) + geom_bar()
+ggplot(df, aes(x = sex, fill = height_cat)) + geom_bar(position = "dodge")
+ggplot(df, aes(x = sex, fill = height_cat)) + geom_bar(position = "fill")
+
+## #############################################################################
+## intro to data.table
+## #############################################################################
+
+## avg height per gender
+mean(df[df$sex == "f", "weight"])
+
+dff <- subset(df, sex == 'f')
+mean(dff$weight)
+
+aggregate(height ~ sex, FUN = mean, data = df)
+
+## there must be a better way!
+library(data.table)
+dt <- data.table(df)
+dt # VS df!
+
+## dt[i]
+dt[1]
+dt[1:5]
+dt[sex == "f"]
+dt[sex == "f"][1:5] # chaining
+dt[ageYear == min(ageYear)]
+dt[ageYear == min(ageYear)][order(height)]
+
+dt[round(runif(1)*.N)]
+dt[round(runif(10)*.N)]
+dt[.N]
+
+## dt[i, j]
+dt[, mean(height)]
+dt[ageYear == min(ageYear), mean(height)]
+dt[ageYear == min(ageYear), summary(height)]
+dt[ageYear == min(ageYear), hist(height)]
+
+## TODO compute the average height of girls and boys
+dt[sex == "f", mean(height)]
+dt[sex == "m", mean(height)]
+
+## dt[i, j, by]
+dt[, mean(height), by = sex]
+dt[, list(H = mean(height)), by = list(gender = sex)]
+dt[, .(H = mean(height)), by = .(gender = sex)]
+dt[, .(H = mean(height), W = mean(weight)), by = .(gender = sex)]
+dt[, .(H = mean(height), W = mean(weight)), by = .(gender = sex, elementary_school = ageYear < 14)]
+
+adt <- dt[, .(H = mean(height), W = mean(weight)), by = .(gender = sex, elementary_school = ageYear < 14)]
+str(adt)
+adt[gender == "f"]
+
+## #############################################################################
+## more data.table examples
+## #############################################################################
+
+?fread # VS read.csv
+
+bookings <- fread('http://bit.ly/CEU-R-hotels-2018-prices')
+str(bookings)
+bookings
+
+## TODO count the number of bookings below 100 EUR
+bookings[price < 100, .N]
+## TODO count the number of bookings below 100 EUR without an offer
+bookings[offer == 0 & price < 100, .N]
+
+## TODO compute the average price of the bookings below 100 EUR
+bookings[price < 100, mean(price)]
+
+## TODO compute the average price of bookings on weekends
+bookings[weekend == 1, mean(price)]
+## TODO compute the average price of bookings on weekdays
+bookings[weekend == 0, mean(price)]
+
+bookings[, mean(price), by = weekend] # dt[, j, by]
+bookings[, mean(price), by = weekend][order(weekend)] # dt[, j, by][i]
+?setorder
+
+## TODO include nnights, holiday and year as well in the aggregate variables
+bookings[, mean(price), by = .(weekend, nnights, holiday, year)]
+
+## TODO compute the average price per number of stars
+?merge
+## x[y] -> rolling joins, overlap joins
+
+features <- fread('http://bit.ly/CEU-R-hotels-2018-features')
+merge(bookings, features)
+
+## NOTE hotel_id was picked as the join key
+bookings[hotel_id == 1]
+features[hotel_id == 1]
+merge(bookings, features)[hotel_id == 1]
+
+## NOTE there's a missing row??
+bookings[, .N]
+merge(bookings, features)[, .N]
+
+features[is.na(hotel_id)]
+bookings[!hotel_id %in% features$hotel_id]
+features[hotel_id == 2]
+
