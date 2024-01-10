@@ -123,6 +123,22 @@ for (user in users) {
 ```
 </details>
 
+## Class Schedule
+
+### Week 1 (200 min)
+
+#### Introduction to R
+
+* General overview of the R ecosystem: [slides](http://bit.ly/CEU-R-intro-2023)
+* Basic math operations: [1.R](1.R#L1)
+* Numbers, strings, vectors: [1.R](1.R#L12)
+* Functions: [1.R](1.R#L43)
+* Basic plots: [1.R](1.R#L62)
+* Basic stats: [1.R](1.R#L84)
+* Intro to data frames: [1.R](1.R#L102)
+
+Suggested reading: [Hadley Wickham: Style guide. In *Advanced R*.](http://adv-r.had.co.nz/Style.html)
+
 ## Contact
 
 File a [GitHub ticket](https://github.com/daroczig/CEU-R-lab/issues).
