@@ -2,12 +2,12 @@ This is the R script repository of the "[Coding 3: Introduction to R](https://co
 
 ## Table of Contents
 
-* [Schedule](https://github.com/daroczig/CEU-DV2#schedule)
-* [Syllabus](https://github.com/daroczig/CEU-DV2#syllabus)
-* [Technical Prerequisites](https://github.com/daroczig/CEU-DV2#technical-prerequisites)
-* [Class Schedule](https://github.com/daroczig/CEU-DV2#class-schedule)
-* [Homework](https://github.com/daroczig/CEU-DV2#homework)
-* [Contact](https://github.com/daroczig/CEU-DV2#contacts)
+* [Schedule](#schedule)
+* [Syllabus](#syllabus)
+* [Technical Prerequisites](#technical-prerequisites)
+* [Class Schedule](#class-schedule)
+* [Homework](#homework)
+* [Contact](#contacts)
 
 ## Schedule
 
@@ -138,7 +138,7 @@ for (user in users) {
 * Introduction to data visualization with `ggplot2`: [1.R](1.R#L244)
 * Introduction to `data.table`: [1.R](1.R#L323)
 
-Suggested reading: [Hadley Wickham: Style guide. In *Advanced R*.](http://adv-r.had.co.nz/Style.html
+Suggested reading: [Hadley Wickham: Style guide. In *Advanced R*.](http://adv-r.had.co.nz/Style.html)
 
 ## Homework
 
