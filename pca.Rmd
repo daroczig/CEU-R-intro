@@ -69,6 +69,18 @@ pca$rotation
 eigen(cov(img1d))$vectors
 ```
 
+But probably more important to render this as an actual HTML table:
+
+```{r}
+knitr::kable(pca$rotation)
+```
+
+Or you could try to pass any R object to `pander` (if installed), as it automatically tries to render any R object in markdown:
+
+```{r}
+pander:::pander(pca)
+```
+
 Recap on PCA: how to get the actual scores?
 
 ```{r}
