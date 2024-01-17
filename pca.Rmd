@@ -1,0 +1,114 @@
+---
+title: "pca"
+output: html_document
+date: "2024-01-16"
+---
+
+```{r download, echo = FALSE}
+download.file('https://bit.ly/r-intro-nasa-backup', 'image.jpg', mode = 'wb')
+```
+
+So we got an image:
+
+![](image.jpg)
+There's a strange object in the sand .. and we want to better highlight that using some stats approach.
+
+Let's import into R!
+
+```{r}
+library(jpeg)
+img <- readJPEG('image.jpg')
+```
+
+Looking at the structure:
+
+```{r}
+str(img)
+```
+
+This seems to be a 3D array!
+
+Checking on the first pixel:
+
+```{r}
+img[1, 1, ]
+
+col <- do.call(rgb, as.list(img[1, 1, ]))
+col
+
+barplot(1, col = col)
+```
+
+Let's record image height and width as we will need later:
+
+```{r}
+dim(img)
+h <- dim(img)[1]
+w <- dim(img)[2]
+```
+
+Now we can transform the 3D array into a 2D table with `h`*`w` rows and 3 columns for the RGB values:
+
+```{r}
+img1d <- matrix(img, h * w)
+str(img1d)
+```
+
+And we are ready to run principal component analysis!
+
+```{r}
+pca <- prcomp(img1d)
+pca
+summary(pca)
+```
+
+Recap on PCA: the rotation matrix is the the eigenvectors of the covariance matrix.
+
+```{r}
+pca$rotation
+eigen(cov(img1d))$vectors
+```
+
+Recap on PCA: how to get the actual scores?
+
+```{r}
+str(pca$x)
+## multiply the standardized numbers by the weights
+str(sweep(img1d, 2, colMeans(img1d)) %*% pca$rotation)
+str(scale(img1d, scale = FALSE) %*% pca$rotation)
+```
+
+What are these components really?
+
+```{r}
+cor(pca$x[, 1], img1d)
+cor(pca$x, img1d)
+```
+
+Maybe better to visualize these correlation coefficients as colors!
+
+```{r}
+extractColors <- function(x) rgb(x[1], x[2], x[3])
+(colors <- apply(abs(pca$rotation), 2, extractColors))
+pie(pca$sdev, col = colors, labels = colors)
+```
+
+Okay, enough playing with this .. what did we achieve? Let's redraw the original image with artificial colors based on the components:
+
+```{r}
+image(matrix(pca$x[, 1], h))
+```
+
+Maybe another component?
+
+```{r}
+image(matrix(pca$x[, 2], h))
+```
+
+Reduce to monochrome:
+
+```{r}
+image(matrix(pca$x[, 2], h), col = gray.colors(100))
+```
+
+You can read a much more detailed post on this at http://bit.ly/r-intro-pca-blog, and find more on PCA at https://stats.stackexchange.com/a/140579.

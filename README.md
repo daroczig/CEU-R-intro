@@ -126,7 +126,7 @@ for (user in users) {
 
 ## Class Schedule
 
-### Week 1 (200 min): Introduction to R
+### Week 1 (300 min): Introduction to R
 
 * General overview of the R ecosystem: [slides](http://bit.ly/CEU-R-intro-2023)
 * Basic math operations: [1.R](1.R#L1)
@@ -139,6 +139,14 @@ for (user in users) {
 * Introduction to `data.table`: [1.R](1.R#L323)
 
 Suggested reading: [Hadley Wickham: Style guide. In *Advanced R*.](http://adv-r.had.co.nz/Style.html)
+
+### Week 2 (300 min): Modeling and reporting
+
+* Warm-up exercise and security reminder: [2.R](2.R#L1)
+* `data.table` recap: [2.R](2.R#L35)
+* `data.table` multiple summaries (optional): [2.R](2.R#L1)
+* Introduction to modeling: [2.R](2.R#L292)
+* Introduction into R Markdown via a use-case: [pca.Rmd](pca.Rmd)
 
 ## Homework
 
@@ -167,6 +175,29 @@ hotels <- readRDS(url('http://bit.ly/CEU-R-hotels-2018-merged'))
 * Create histograms on the nightly prices for each star category! Check out the arguments and disable forcing the same Y axis range for the subplots.
 
 Compare your results with [the example solutions](https://raw.githack.com/daroczig/CEU-R-intro/2023-winter/homework.html).
+
+## Final project
+
+Use any publicly accessible dataset (preferably from the TidyTuesday projects at https://github.com/rfordatascience/tidytuesday, but if you don't feel creative, feel free to default to using the `diamonds` from the `ggplot2` package) and do data transformations that seems useful, optionally merge external datasets, generate data visualizations that makes sense and are insightful, plus provide comments on those in plain English.
+
+Submission: prepare an R markdown document that includes plain English text description of the dataset, problems/questions you analyzed, actual R code chunks (printing both the code and its output) loading the data, doing the analysis, comments and summary/conclusion of the results, and knit the Rmd to HTML, then upload both the Rmd and the HTML to Moodle before Feb 4, 2024 midnight (CET). Please don't leave the submission for the last minute, and be sure to submit by Jan 26, 2024 (Friday) if you would like to get some feedback before the final deadline.
+
+Required items:
+
+* filtering rows using `data.table`,
+* aggregating data using `data.table`,
+* at least 7 plots using at least 3 different `ggplot2` geoms (e.g. a scatterplot, boxplot, barchart etc.)
+
+The above items with proper homework solutions from the first week will result in "B" grade.
+
+For "A", please also work on the below extra items:
+
+* merge datasets,
+* apply a theme,
+* define the axis and plot titles,
+* use a color palette from <colorbrewer2.org>,
+* use multiple geom layers on the same plot,
+* publish your results on RPubs.com/Medium (look at the "Publish" option in the "File" menu).
 
 ## Contact
 
