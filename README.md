@@ -1,4 +1,4 @@
-This is the R script repository of the "[Coding 3: Introduction to R](https://courses.ceu.edu/courses/2023-2024/coding-3-introduction-r)" course of the 2023/2024 Winter term, part of the [MSc in Business Analytics](https://courses.ceu.edu/programs/ms/master-science-business-analytics) at CEU. In the previous years, most of these materials were part of the "Data Analysis 1a: Exploration" course that you can find in the [2015/2016 Winter](https://github.com/daroczig/CEU-R-lab/tree/2016), [2016/2017 Fall](https://github.com/daroczig/CEU-R-lab/tree/2017), [2017/2018 Fall](https://github.com/daroczig/CEU-R-lab/tree/2018) and [2018/2019 Fall](https://github.com/daroczig/CEU-R-lab/tree/2018-fall) branches.
+This is the R script repository of the "[Coding 3: Introduction to R](https://ceu.studyguide.timeedit.net/modules/ECBS5155?type=CORE)" course of the 2024/2025 Winter term, part of the [MSc in Business Analytics](https://courses.ceu.edu/programs/ms/master-science-business-analytics) at CEU. In the previous years, most of these materials were part of the "Data Analysis 1a: Exploration" course that you can find in the [2015/2016 Winter](https://github.com/daroczig/CEU-R-lab/tree/2016), [2016/2017 Fall](https://github.com/daroczig/CEU-R-lab/tree/2017), [2017/2018 Fall](https://github.com/daroczig/CEU-R-lab/tree/2018), [2018/2019 Fall](https://github.com/daroczig/CEU-R-lab/tree/2018-fall), and [2023/2024 Winter](https://github.com/daroczig/CEU-R-lab/tree/2023-winter) branches.
 
 ## Table of Contents
 
@@ -11,7 +11,7 @@ This is the R script repository of the "[Coding 3: Introduction to R](https://co
 
 ## Schedule
 
-2 x 300 mins on Jan 10 and 17:
+2 x 300 mins on Jan 8 and 15:
 
 * 13:30 - 15:10 session 1
 * 15:10 - 15:40 break
@@ -31,7 +31,7 @@ Please find in the `syllabus` folder of this repository.
 
 Please bring your own laptop* and make sure to install the below items **before** attending the first class:
 
-0. Join the Slack channel dedicated to the class (`#ba-r-intro-2023`)
+0. Join the Teams channel dedicated to the class at `ba-r-intro-2024` with the `o3c4ngs` team code
 1. Install `R` from https://cran.r-project.org
 2. Install `RStudio Desktop` (Open Source License) from https://posit.co/download/rstudio-desktop/
 3. Enter the following commands in the R console (bottom left panel of RStudio) and make sure you see a plot in the bottom right panel and no errors in the R console:
@@ -126,79 +126,8 @@ for (user in users) {
 
 ## Class Schedule
 
-### Week 1 (300 min): Introduction to R
-
-* General overview of the R ecosystem: [slides](http://bit.ly/CEU-R-intro-2023)
-* Basic math operations: [1.R](1.R#L1)
-* Numbers, strings, vectors: [1.R](1.R#L12)
-* Functions: [1.R](1.R#L50)
-* Basic plots: [1.R](1.R#L68)
-* Basic stats: [1.R](1.R#L136)
-* Intro to data frames: [1.R](1.R#L167)
-* Introduction to data visualization with `ggplot2`: [1.R](1.R#L244)
-* Introduction to `data.table`: [1.R](1.R#L323)
-
-Suggested reading: [Hadley Wickham: Style guide. In *Advanced R*.](http://adv-r.had.co.nz/Style.html)
-
-### Week 2 (300 min): Modeling and reporting
-
-* Warm-up exercise and security reminder: [2.R](2.R#L1)
-* `data.table` recap: [2.R](2.R#L35)
-* `data.table` multiple summaries (optional): [2.R](2.R#L1)
-* Introduction to modeling: [2.R](2.R#L292)
-* Introduction into R Markdown via a use-case: [pca.Rmd](pca.Rmd)
-
-## Homework
-
-Load the bookings dataset:
-
-```r
-library(ggplot2)
-library(data.table)
-hotels <- readRDS(url('http://bit.ly/CEU-R-hotels-2018-merged'))
-```
-
-* How many hotels are from Austria?
-* What is the rating of the most expensive hotel (based on the price per night)?
-* How many bookings are in 4-star hotels?
-* Which country has the highest number of 5-star hotels?
-* Plot the number of bookings per country!
-* Flip the coordinates and use the "classic dark-on-light theme"!
-* Drop the Y axis title, and rename the X axis to "Number of hotels"!
-* Count the number of hotels per country!
-* Order by alphabet!
-* Count the number of bookings per country, order by the number of bookings!
-* Compute the average rating per number of stars! Use the `weighted.mean` function to account for the number of ratings of the hotels, and experiment with the `na.rm` argument. Eliminate `NA`s. Order by stars.
-* Plot this computed average rating per stars!
-* Make sure that each star category is printed on the X axis!
-* Create a boxplot on ratings per stars!
-* Create histograms on the nightly prices for each star category! Check out the arguments and disable forcing the same Y axis range for the subplots.
-
-Compare your results with [the example solutions](https://raw.githack.com/daroczig/CEU-R-intro/2023-winter/homework.html).
-
-## Final project
-
-Use any publicly accessible dataset (preferably from the TidyTuesday projects at https://github.com/rfordatascience/tidytuesday, but if you don't feel creative, feel free to default to using the `diamonds` from the `ggplot2` package) and do data transformations that seems useful, optionally merge external datasets, generate data visualizations that makes sense and are insightful, plus provide comments on those in plain English.
-
-Submission: prepare an R markdown document that includes plain English text description of the dataset, problems/questions you analyzed, actual R code chunks (printing both the code and its output) loading the data, doing the analysis, comments and summary/conclusion of the results, and knit the Rmd to HTML, then upload both the Rmd and the HTML to Moodle before Feb 4, 2024 midnight (CET). Please don't leave the submission for the last minute, and be sure to submit by Jan 26, 2024 (Friday) if you would like to get some feedback before the final deadline.
-
-Required items:
-
-* filtering rows using `data.table`,
-* aggregating data using `data.table`,
-* at least 7 plots using at least 3 different `ggplot2` geoms (e.g. a scatterplot, boxplot, barchart etc.)
-
-The above items with proper homework solutions from the first week will result in "B" grade.
-
-For "A", please also work on the below extra items:
-
-* merge datasets,
-* apply a theme,
-* define the axis and plot titles,
-* use a color palette from <colorbrewer2.org>,
-* use multiple geom layers on the same plot,
-* publish your results on RPubs.com/Medium (look at the "Publish" option in the "File" menu).
+To be updated from week to week **after** the class.
 
 ## Contact
 
-File a [GitHub ticket](https://github.com/daroczig/CEU-R-lab/issues).
+File a [GitHub ticket](https://github.com/daroczig/CEU-R-intro/issues).
