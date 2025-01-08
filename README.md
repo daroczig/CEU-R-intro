@@ -86,7 +86,8 @@ sudo apt update
 sudo apt install -y \
   r-cran-ggplot2 r-cran-ggally r-cran-readxl \
   r-cran-data.table \
-  r-cran-glue r-cran-logger
+  r-cran-glue r-cran-logger \
+  r-cran-pairsd3 r-cran-ggally
 # install RStudio IDE
 sudo apt install -y gdebi-core
 wget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2024.12.0-467-amd64.deb
@@ -126,6 +127,23 @@ for (user in users) {
 </details>
 
 ## Class Schedule
+
+### Week 1 (300 min): Introduction to R
+
+* General overview of the R ecosystem: [slides](https://bit.ly/CEU-R-intro-2024)
+* Basic math operations: [1.R](1.R#L1)
+* Fun math ops with 2025: [1.R](1.R#L12)
+* Numbers, strings, vectors, constants, variables: [1.R](1.R#L44)
+* Functions: [1.R](1.R#L86)
+* Basic plots: [1.R](1.R#L105)
+* Basic stats: [1.R](1.R#L176)
+* Intro to data frames: [1.R](1.R#L207)
+* Introduction to data visualization with `ggplot2`: [1.R](1.R#L284)
+* Introduction to `data.table`: [1.R](1.R#L363)
+
+Suggested reading: [Hadley Wickham: Style guide. In *Advanced R*.](http://adv-r.had.co.nz/Style.html)
+
+### Week 2 (300 min): Modeling and reporting
 
 To be updated from week to week **after** the class.
 
