@@ -147,6 +147,36 @@ Suggested reading: [Hadley Wickham: Style guide. In *Advanced R*.](http://adv-r.
 
 To be updated from week to week **after** the class.
 
+## Homework
+
+Load the `flights` dataset from the `nycflights13` package as a `data.table` object:
+
+```r
+library(data.table)
+library(nycflights13)
+dt <- data.table(flights)
+```
+
+Then answer the below questions with the appropriate data transformations and/or visualizations:
+
+1. How many flights originated from JFK?
+2. Count the number of flights per month.
+3. Visualize the number of flights per destination.
+4. Count the number of flights with an arrival delay of more than 100 mins.
+5. Visualize the maximum arrival delay per destination.
+6. Aggregate the min and max arrival delay per origin.
+7. Visualize the distribution of the arrival delay per origin.
+8. Visualize the distribution of the arrival delay per destination.
+9. List the top 5 destinations being the furthest from NYC!
+10. How many flights were scheduled to departure before 11 am?
+
+Submission format: create an R script with the above questions added
+as comments (using the `#` symbol at the beginning of the line),
+followed by R commands to answer those questions. The R script should
+be able to run without any errors. Upload to Moodle.
+
+Deadline: Jan 15, 2025
+
 ## Contact
 
 File a [GitHub ticket](https://github.com/daroczig/CEU-R-intro/issues).
