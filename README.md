@@ -147,7 +147,13 @@ Suggested reading: [Hadley Wickham: Style guide. In *Advanced R*.](http://adv-r.
 
 ### Week 2 (300 min): Modeling and reporting
 
-To be updated from week to week **after** the class.
+Homework solutions: [R script](homework.R) and [R markdown](homework.Rmd)
+
+* Warm-up exercise and security reminder: [2.R](2.R#L1)
+* `data.table`: [2.R](2.R#L35)
+* Introduction to modeling: [2.R](2.R#L269)
+
+Extra example R Markdown: [pca.Rmd](pca.Rmd)
 
 ## Homework
 
@@ -178,6 +184,29 @@ followed by R commands to answer those questions. The R script should
 be able to run without any errors. Upload to Moodle.
 
 Deadline: Jan 15, 2025
+
+## Final project
+
+Use any publicly accessible dataset (preferably from the TidyTuesday projects at https://github.com/rfordatascience/tidytuesday, but if you don't feel creative, feel free to default to using the `diamonds` from the `ggplot2` package) and do data transformations that seems useful, optionally merge external datasets, generate data visualizations that makes sense and are insightful, plus provide comments on those in plain English.
+
+Submission: prepare an R markdown document that includes plain English text description of the dataset, problems/questions you analyzed, actual R code chunks (printing both the code and its output) loading the data, doing the analysis, comments and summary/conclusion of the results, and knit the Rmd to HTML, then upload both the Rmd and the HTML to Moodle before Jan 31, 2025 midnight (CET).
+
+Required items:
+
+* filtering rows using `data.table`,
+* aggregating data using `data.table`,
+* at least 7 plots using at least 3 different `ggplot2` geoms (e.g. a scatterplot, boxplot, barchart etc.)
+
+The above items with proper homework solutions from the first week will result in "B" grade.
+
+For "A", please also work on the below extra items:
+
+* merge datasets,
+* apply a theme,
+* define the axis and plot titles,
+* use a color palette from <colorbrewer2.org>,
+* use multiple geom layers on the same plot,
+* publish your results on RPubs.com/Medium (look at the "Publish" option in the "File" menu).
 
 ## Contact
 
