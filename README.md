@@ -87,7 +87,9 @@ sudo apt install -y \
   r-cran-ggplot2 r-cran-ggally r-cran-readxl \
   r-cran-data.table \
   r-cran-glue r-cran-logger \
-  r-cran-pairsd3 r-cran-ggally
+  r-cran-pairsd3 r-cran-ggally \
+  r-cran-maps r-cran-nycflights13 \
+  r-cran-png r-cran-rpart r-cran-partykit r-cran-randomforest r-cran-pander
 # install RStudio IDE
 sudo apt install -y gdebi-core
 wget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2024.12.0-467-amd64.deb
