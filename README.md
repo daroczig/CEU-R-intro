@@ -19,7 +19,7 @@ This is the R script repository of the "[Coding 3: Introduction to R](https://ce
 
 ## Location
 
-In-person at the Vienna campus (QS B-421).
+In-person at the Vienna campus (QS A-214).
 
 ## Syllabus
 
