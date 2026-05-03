@@ -1,4 +1,4 @@
-This is the R script repository of the "[Coding 3: Introduction to R](https://ceu.studyguide.timeedit.net/modules/ECBS5155?type=CORE)" course of the 2024/2025 Winter term, part of the [MSc in Business Analytics](https://courses.ceu.edu/programs/ms/master-science-business-analytics) at CEU. In the previous years, most of these materials were part of the "Data Analysis 1a: Exploration" course that you can find in the [2015/2016 Winter](https://github.com/daroczig/CEU-R-lab/tree/2016), [2016/2017 Fall](https://github.com/daroczig/CEU-R-lab/tree/2017), [2017/2018 Fall](https://github.com/daroczig/CEU-R-lab/tree/2018), [2018/2019 Fall](https://github.com/daroczig/CEU-R-lab/tree/2018-fall), and [2023/2024 Winter](https://github.com/daroczig/CEU-R-lab/tree/2023-winter) branches.
+This is the R script repository of the "[Coding 3: Introduction to R](https://ceu.studyguide.timeedit.net/modules/ECBS5155?type=CORE)" course of the 2025/2026 Spring term, part of the [MSc in Business Analytics](https://courses.ceu.edu/programs/ms/master-science-business-analytics) at CEU. In the previous years, most of these materials were part of the "Data Analysis 1a: Exploration" course that you can find in the [2015/2016 Winter](https://github.com/daroczig/CEU-R-lab/tree/2016), [2016/2017 Fall](https://github.com/daroczig/CEU-R-lab/tree/2017), [2017/2018 Fall](https://github.com/daroczig/CEU-R-lab/tree/2018), [2018/2019 Fall](https://github.com/daroczig/CEU-R-lab/tree/2018-fall), [2023/2024 Winter](https://github.com/daroczig/CEU-R-lab/tree/2023-winter), and [2024/2025 Winter](https://github.com/daroczig/CEU-R-lab/tree/2024-winter) branches.
 
 ## Table of Contents
 
@@ -11,13 +11,11 @@ This is the R script repository of the "[Coding 3: Introduction to R](https://ce
 
 ## Schedule
 
-2 x 300 mins on Jan 8 and 15:
+3 x 200 mins on May 4, 11, and 18:
 
 * 13:30 - 15:10 session 1
 * 15:10 - 15:40 break
 * 15:40 - 17:20 session 2
-* 17:20 - 17:40 break
-* 17:40 - 19:20 session 3
 
 ## Location
 
@@ -31,7 +29,7 @@ Please find in the `syllabus` folder of this repository.
 
 Please bring your own laptop* and make sure to install the below items **before** attending the first class:
 
-0. Join the Teams channel dedicated to the class at `ba-r-intro-2024` with the `o3c4ngs` team code
+0. Join the Teams channel dedicated to the class at `[BA 2025] Coding 3: Introduction to R` with the `vahwzjk` team code
 1. Install `R` from https://cran.r-project.org
 2. Install `RStudio Desktop` (Open Source License) from https://posit.co/download/rstudio-desktop/
 3. Enter the following commands in the R console (bottom left panel of RStudio) and make sure you see a plot in the bottom right panel and no errors in the R console:
@@ -68,14 +66,14 @@ Find more resources in Jenny Bryan's "[Happy Git and GitHub for the useR](http:/
 (*) If you may not be able to use your own laptop, there's a shared RStudio Server set up in AWS - including all the required R packages already installed for you. Look up the class Slack channel for how to access.
 
 For the curious mind, this is how the shared RStudio Server was set up in AWS: <details><summary>Click to expand ...</summary>
-
+TODO
 💪 Installing software similar to [`add_cranapt_noble.sh`](https://github.com/eddelbuettel/r2u/blob/master/inst/scripts/add_cranapt_noble.sh):
 
 ```
 # most recent R builds
-wget -q -O- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
-echo "deb [arch=amd64] https://cloud.r-project.org/bin/linux/ubuntu noble-cran40/" | sudo tee -a /etc/apt/sources.list.d/cran_r.list
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 67C2D66C4B1D4339 51716619E084DAB9
+sudo apt install --no-install-recommends software-properties-common dirmngr
+wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
 sudo apt update && sudo apt upgrade
 sudo apt install r-base
 # apt builds of all CRAN packages
@@ -92,11 +90,23 @@ sudo apt install -y \
   r-cran-png r-cran-rpart r-cran-partykit r-cran-randomforest r-cran-pander
 # install RStudio IDE
 sudo apt install -y gdebi-core
-wget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2024.12.0-467-amd64.deb
+wget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2026.04.0-526-amd64.deb
 sudo gdebi rstudio-server-*.deb
-# never do this in prod
-echo "www-port=80" | sudo tee -a /etc/rstudio/rserver.conf
-sudo rstudio-server restart
+# reverse proxy for SSL termination
+sudo apt install -y caddy
+cat <<EOF | sudo tee /etc/caddy/Caddyfile
+r.de3.click {
+    reverse_proxy localhost:8787 {
+            transport http {
+                read_timeout 20d
+            }
+            # need to rewrite the Location header to remove the port number
+            # https://caddy.community/t/reverse-proxy-header-down-on-location-header-or-something-equivalent/13157/3
+            header_down  Location ([^:]+://[^:]+(:[0-9]+)?/)  ./
+        }
+}
+EOF
+sudo systemctl restart caddy
 ```
 
 💪 Creating users
@@ -130,83 +140,7 @@ for (user in users) {
 
 ## Class Schedule
 
-### Week 1 (300 min): Introduction to R
-
-* General overview of the R ecosystem: [slides](https://bit.ly/CEU-R-intro-2024)
-* Basic math operations: [1.R](1.R#L1)
-* Fun math ops with 2025: [1.R](1.R#L12)
-* Numbers, strings, vectors, constants, variables: [1.R](1.R#L44)
-* Functions: [1.R](1.R#L86)
-* Basic plots: [1.R](1.R#L105)
-* Basic stats: [1.R](1.R#L176)
-* Intro to data frames: [1.R](1.R#L207)
-* Introduction to data visualization with `ggplot2`: [1.R](1.R#L284)
-* Introduction to `data.table`: [1.R](1.R#L363)
-
-Suggested reading: [Hadley Wickham: Style guide. In *Advanced R*.](http://adv-r.had.co.nz/Style.html)
-
-### Week 2 (300 min): Modeling and reporting
-
-Homework solutions: [R script](homework.R) and [R markdown](homework.Rmd)
-
-* Warm-up exercise and security reminder: [2.R](2.R#L1)
-* `data.table`: [2.R](2.R#L35)
-* Introduction to modeling: [2.R](2.R#L269)
-
-Extra example R Markdown: [pca.Rmd](pca.Rmd)
-
-## Homework
-
-Load the `flights` dataset from the `nycflights13` package as a `data.table` object:
-
-```r
-library(data.table)
-library(nycflights13)
-dt <- data.table(flights)
-```
-
-Then answer the below questions with the appropriate data transformations and/or visualizations:
-
-1. How many flights originated from JFK?
-2. Count the number of flights per month.
-3. Visualize the number of flights per destination.
-4. Count the number of flights with an arrival delay of more than 100 mins.
-5. Visualize the maximum arrival delay per destination.
-6. Aggregate the min and max arrival delay per origin.
-7. Visualize the distribution of the arrival delay per origin.
-8. Visualize the distribution of the arrival delay per destination.
-9. List the top 5 destinations being the furthest from NYC!
-10. How many flights were scheduled to departure before 11 am?
-
-Submission format: create an R script with the above questions added
-as comments (using the `#` symbol at the beginning of the line),
-followed by R commands to answer those questions. The R script should
-be able to run without any errors. Upload to Moodle.
-
-Deadline: Jan 15, 2025
-
-## Final project
-
-Use any publicly accessible dataset (preferably from the TidyTuesday projects at https://github.com/rfordatascience/tidytuesday, but if you don't feel creative, feel free to default to using the `diamonds` from the `ggplot2` package) and do data transformations that seems useful, optionally merge external datasets, generate data visualizations that makes sense and are insightful, plus provide comments on those in plain English.
-
-Submission: prepare an R markdown document that includes plain English text description of the dataset, problems/questions you analyzed, actual R code chunks (printing both the code and its output) loading the data, doing the analysis, comments and summary/conclusion of the results, and knit the Rmd to HTML, then upload both the Rmd and the HTML to Moodle before Jan 31, 2025 midnight (CET).
-
-Required items:
-
-* filtering rows using `data.table`,
-* aggregating data using `data.table`,
-* at least 7 plots using at least 3 different `ggplot2` geoms (e.g. a scatterplot, boxplot, barchart etc.)
-
-The above items with proper homework solutions from the first week will result in "B" grade.
-
-For "A", please also work on the below extra items:
-
-* merge datasets,
-* apply a theme,
-* define the axis and plot titles,
-* use a color palette from <colorbrewer2.org>,
-* use multiple geom layers on the same plot,
-* publish your results on RPubs.com/Medium (look at the "Publish" option in the "File" menu).
+To be updated weekly.
 
 ## Contact
 
