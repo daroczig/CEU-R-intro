@@ -140,6 +140,18 @@ for (user in users) {
 
 ## Class Schedule
 
+### Week 1 (300 min): Introduction to R
+
+* General overview of the R ecosystem: [slides](https://bit.ly/CEU-R-intro-2026)
+* Numbers, strings, vectors, constants, variables: [1.R](1.R#L1
+* Functions: [1.R](1.R#L79)
+* Basic plots: [1.R](1.R#L101)
+* Basic stats: [1.R](1.R#L155)
+* Intro to data frames: [1.R](1.R#L186)
+* Introduction to data visualization with `ggplot2`: [1.R](1.R#L264)
+
+### Week 2
+
 To be updated weekly.
 
 ## Contact
