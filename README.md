@@ -152,6 +152,13 @@ for (user in users) {
 
 ### Week 2
 
+* Warm-up exercise and security reminder: [2.R](2.R#L1)
+* MDS: [2.R](2.R#L101)
+* Simpson's paradox: [2.R](2.R#L246)
+* Intro to `data.table`: [2.R](2.R#L273)
+
+### Week 3
+
 To be updated weekly.
 
 ## Contact
