@@ -159,7 +159,14 @@ for (user in users) {
 
 ### Week 3
 
-To be updated weekly.
+* EDA warmup: [3.R](3.R#L1)
+* Modeling:
+
+  * Logistic regression: [3.R](3.R#L101)
+  * K-nearest neighbors: [3.R](3.R#L188)
+  * Decision trees: [3.R](3.R#L198)
+  * Random forest: [3.R](3.R#L260)
+  * Gradient boosting machines: [3.R](3.R#L281)
 
 ## Final project
 
