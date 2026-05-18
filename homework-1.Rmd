@@ -1,0 +1,89 @@
+---
+title: "Homework 1"
+output: pdf_document
+date: "2026-05-04"
+---
+
+Replicate the following plots using the `ggplot2` package. Submit your code and the plots as a single PDF file (like this one, but without hiding the R code) on Moodle!
+
+```{r,echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(ggplot2)
+```
+
+## 1. Check the structure of the `mtcars` dataset!
+
+```{r}
+str(mtcars)
+```
+
+\newpage
+
+## 2. Create a histogram of the `mpg` column!
+
+```{r}
+ggplot(mtcars, aes(x=mpg)) + geom_histogram()
+```
+
+\newpage
+
+## 3. Create a horizontal boxplot of the `mpg` column!
+
+```{r}
+ggplot(mtcars, aes(x=mpg)) + geom_boxplot()
+```
+
+\newpage
+
+## 4. Create a vertical boxplot of the `mpg` column:
+
+```{r}
+ggplot(mtcars, aes(y=mpg)) + geom_boxplot()
+```
+ 
+\newpage
+
+## 5. Create a boxplot on the `mpg` column split by the number of gears! Note the x axis label as a hint for converting the continuous variable to discrete.
+```{r}
+ggplot(mtcars, aes(x=factor(gear), y=mpg)) + geom_boxplot()
+```
+
+\newpage
+
+## 6. Create a scatter plot of the `mpg` column against the `wt` column, color the points by the number of cylinders! Move the legend to the bottom of the plot using the `theme` function.
+
+```{r}
+ggplot(mtcars, aes(x=wt, y=mpg, color=factor(cyl))) + geom_point() + theme(legend.position = "bottom")
+```
+
+\newpage
+
+## 7. Create a semi-transparent density plot on the `hp` column split (colored) by the number of cylinders! Note that there's no legend, and the outline of the density plot is the same color as the fill.
+
+```{r}
+ggplot(mtcars, aes(x=hp, fill=factor(cyl), color=factor(cyl))) + geom_density(alpha=0.5) + theme(legend.position = "none")
+```
+
+\newpage
+
+## 8. Create histograms on `hp` split by the number of cylinders using the `facet_wrap` function!
+
+```{r}
+ggplot(mtcars, aes(x=hp)) + geom_histogram(alpha=0.5) + facet_wrap(~factor(cyl))
+```
+
+\newpage
+
+## 9. Create a scatter plot on `hp` against `wt` with a linear regression line!
+
+```{r}
+ggplot(mtcars, aes(x=wt, y=hp)) + geom_point() + geom_smooth(method="lm")
+```
+
+\newpage
+
+## 10. Replicate the previous plot, but color the points by the number of cylinders! Keep the regression line the same color as the points.
+
+```{r}
+ggplot(mtcars, aes(x=wt, y=hp)) + geom_point(aes(color=factor(cyl))) + geom_smooth(method="lm")
+```
